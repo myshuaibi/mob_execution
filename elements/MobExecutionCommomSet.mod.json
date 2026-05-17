@@ -1,0 +1,10 @@
+{
+  "_fv": 85,
+  "_type": "config",
+  "definition": {
+    "file": "mob_execution",
+    "configType": 0,
+    "config": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"config_start\" deletable=\"false\" x=\"47\" y=\"61\"><next><block type=\"config_variable\"><field name=\"name\">limit_max_health</field><field name=\"comment\">Decide the entity health limit in the execution machine</field><value name=\"value\"><block type=\"config_number_variable\"><field name=\"name\">limit_max_health</field><field name=\"value\">60</field></block></value><next><block type=\"config_variable\"><field name=\"name\">basic_execution</field><field name=\"comment\">Determine the basic machine damage per tick</field><value name=\"value\"><block type=\"config_number_variable\"><field name=\"name\">basic_execution</field><field name=\"value\">1</field></block></value><next><block type=\"config_variable\"><field name=\"name\">machine_protection</field><field name=\"comment\">Once enabled, machines placed by others cannot be destroyed in non-creative mode.</field><value name=\"value\"><block type=\"config_logic_variable\"><field name=\"name\">machine_protection</field><field name=\"value\">true</field></block></value><next><block type=\"config_variable\"><field name=\"name\">precision_mode</field><field name=\"comment\">After being enabled, only entities killed by execution damage are considered machine kills.</field><value name=\"value\"><block type=\"config_logic_variable\"><field name=\"name\">precision_mode</field><field name=\"value\">true</field></block></value><next><block type=\"config_variable\"><field name=\"name\">infestation_amount</field><field name=\"comment\">Determines the single-use bonus provided by socketing the killing gem</field><value name=\"value\"><block type=\"config_number_variable\"><field name=\"name\">infestation_amount</field><field name=\"value\">0.12</field></block></value></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "defining": true
+  }
+}

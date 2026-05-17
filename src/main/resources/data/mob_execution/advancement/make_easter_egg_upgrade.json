@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "mob_execution:easter_egg_upgrade"
+    },
+    "title": {
+      "translate": "advancements.make_easter_egg_upgrade.title"
+    },
+    "description": {
+      "translate": "advancements.make_easter_egg_upgrade.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "make_easter_egg_upgrade_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mob_execution:easter_egg_upgrade",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "mob_execution:root_mob_execution"
+}

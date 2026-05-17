@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "mob_execution:auto_execution_machine",
+    "mob_execution:execution_machine"
+  ]
+}

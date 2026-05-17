@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mob_execution:block/auto_execution_machine"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#mob_execution:execution_damage",
+      "required": false
+    }
+  ]
+}

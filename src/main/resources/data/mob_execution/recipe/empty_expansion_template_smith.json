@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mob_execution:empty_upgrade_template"
+  },
+  "base": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  },
+  "addition": {
+    "tag": "c:obsidians"
+  },
+  "result": {
+    "id": "mob_execution:empty_expansion_template"
+  }
+}

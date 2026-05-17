@@ -1,0 +1,213 @@
+{
+  "_fv": 85,
+  "_type": "block",
+  "definition": {
+    "texture": "execution_machine_bottom",
+    "textureTop": "execution_machine_top",
+    "textureLeft": "execution_machine_side",
+    "textureFront": "execution_machine_side",
+    "textureRight": "execution_machine_side",
+    "textureBack": "execution_machine_side",
+    "renderType": 10,
+    "customModelName": "Normal",
+    "rotationMode": 0,
+    "enablePitch": false,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "states": [
+      {
+        "texture": "execution_machine_bottom",
+        "textureTop": "execution_machine_top_powed",
+        "textureLeft": "execution_machine_side_powed",
+        "textureFront": "execution_machine_side_powed",
+        "textureRight": "execution_machine_side_powed",
+        "textureBack": "execution_machine_side_powed",
+        "renderType": 10,
+        "customModelName": "Normal",
+        "particleTexture": "execution_machine_bottom",
+        "hasCustomBoundingBox": false,
+        "boundingBoxes": [
+          {
+            "mx": 0.0,
+            "my": 0.0,
+            "mz": 0.0,
+            "Mx": 16.0,
+            "My": 16.0,
+            "Mz": 16.0,
+            "subtract": false
+          }
+        ],
+        "stateMap": [
+          {
+            "property": {
+              "name": "POWERED",
+              "type": "logic"
+            },
+            "value": true
+          }
+        ]
+      }
+    ],
+    "animations": [],
+    "itemTexture": "",
+    "particleTexture": "execution_machine_bottom",
+    "blockSetType": "OAK",
+    "leavesParticleChance": 0.0,
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "hasTransparency": false,
+    "connectedSides": false,
+    "transparencyType": "SOLID",
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 16.0,
+        "subtract": false
+      }
+    ],
+    "customProperties": [
+      {
+        "name": "POWERED",
+        "type": "logic",
+        "value": false
+      }
+    ],
+    "name": "Execution Machine",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "hardness": 5.0,
+    "resistance": 30.0,
+    "hasGravity": false,
+    "isWaterloggable": false,
+    "hasBlockItem": true,
+    "maxStackSize": 64,
+    "rarity": "COMMON",
+    "immuneToFire": false,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MobExecution"
+      },
+      {
+        "value": "TRANSPORTATION"
+      },
+      {
+        "value": "REDSTONE"
+      }
+    ],
+    "destroyTool": "pickaxe",
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 1,
+    "xpAmountMin": 0,
+    "xpAmountMax": 0,
+    "useLootTableForDrops": false,
+    "requiresCorrectTool": true,
+    "enchantPowerBonus": 0.0,
+    "plantsGrowOn": false,
+    "canRedstoneConnect": false,
+    "hasCustomOpacity": false,
+    "lightOpacity": 15,
+    "tickRate": 1,
+    "tickRandomly": false,
+    "isReplaceable": false,
+    "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
+    "colorOnMap": "DEFAULT",
+    "noteBlockInstrument": "harp",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
+    "ignitedByLava": false,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "reactionToPushing": "NORMAL",
+    "isNotColidable": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "STONE"
+    },
+    "breakSound": {
+      "value": "block.iron.break"
+    },
+    "fallSound": {
+      "value": "block.iron.fall"
+    },
+    "hitSound": {
+      "value": "block.iron.hit"
+    },
+    "placeSound": {
+      "value": "block.iron.place"
+    },
+    "stepSound": {
+      "value": "block.iron.step"
+    },
+    "luminance": {
+      "fixedValue": 0.0,
+      "name": "ExecutionMachineLight"
+    },
+    "unbreakable": false,
+    "vanillaToolTier": "IRON",
+    "additionalHarvestCondition": {
+      "name": "MachineLordJudgment"
+    },
+    "isBonemealable": false,
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
+    "hasInventory": true,
+    "guiBoundTo": "MachineGui",
+    "openGUIOnRightClick": true,
+    "inventorySize": 10,
+    "inventoryStackSize": 1,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": true,
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
+    "onRedstoneOn": {
+      "name": "MachinePower"
+    },
+    "onRedstoneOff": {
+      "name": "MachinePowerFalse"
+    },
+    "generateFeature": false,
+    "restrictionBiomes": [],
+    "blocksToReplace": [
+      {
+        "value": "TAG:stone_ore_replaceables"
+      }
+    ],
+    "generationShape": "UNIFORM",
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
+  }
+}

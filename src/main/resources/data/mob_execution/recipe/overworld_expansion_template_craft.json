@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:grass_block"
+    },
+    "b": {
+      "item": "mob_execution:empty_expansion_template"
+    }
+  },
+  "result": {
+    "id": "mob_execution:overworld_expansion_template",
+    "count": 1
+  }
+}

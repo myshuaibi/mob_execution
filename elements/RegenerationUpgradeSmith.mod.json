@@ -1,0 +1,17 @@
+{
+  "_fv": 85,
+  "_type": "anvilrecipe",
+  "definition": {
+    "leftitem": {
+      "value": "CUSTOM:EmptyUpgradeTemplate"
+    },
+    "rightitem": {
+      "value": "Items.TOTEM_OF_UNDYING"
+    },
+    "rightcost": 1,
+    "xpcost": 9,
+    "output": {
+      "value": "CUSTOM:RegenerationUpgrade"
+    }
+  }
+}

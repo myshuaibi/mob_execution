@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:popped_chorus_fruit"
+    },
+    "b": {
+      "item": "mob_execution:nether_expansion_template"
+    }
+  },
+  "result": {
+    "id": "mob_execution:end_expansion_template",
+    "count": 1
+  }
+}

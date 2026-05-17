@@ -1,0 +1,10 @@
+package com.myshuaibi.mobexecution.item;
+
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Item;
+
+public class RealDamageUpgradeItem extends Item {
+	public RealDamageUpgradeItem() {
+		super(new Item.Properties().rarity(Rarity.UNCOMMON));
+	}
+}

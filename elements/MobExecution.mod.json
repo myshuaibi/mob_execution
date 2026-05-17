@@ -1,0 +1,11 @@
+{
+  "_fv": 85,
+  "_type": "tab",
+  "definition": {
+    "name": "Mob Execution",
+    "icon": {
+      "value": "CUSTOM:AutoExecutionMachine"
+    },
+    "showSearch": false
+  }
+}

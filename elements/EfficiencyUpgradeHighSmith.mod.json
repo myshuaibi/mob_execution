@@ -1,0 +1,36 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:EfficiencyUpgrade"
+      },
+      {
+        "value": "Items.NETHERITE_UPGRADE"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:EfficiencyUpgrade"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.NETHERITE_SWORD"
+    },
+    "smithingInputTemplateStack": {
+      "value": "Items.NETHERITE_UPGRADE"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:EfficiencyUpgradeHigh"
+    },
+    "name": "efficiency_upgrade_high_smith",
+    "namespace": "mod"
+  }
+}

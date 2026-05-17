@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "tag": "minecraft:swords"
+    },
+    "b": {
+      "item": "mob_execution:empty_upgrade_template"
+    }
+  },
+  "result": {
+    "id": "mob_execution:efficiency_upgrade",
+    "count": 1
+  }
+}

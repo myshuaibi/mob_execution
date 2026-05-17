@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mob_execution:empty_upgrade_template"
+  },
+  "addition": {
+    "item": "mob_execution:killing_gem"
+  },
+  "result": {
+    "id": "mob_execution:real_damage_upgrade"
+  }
+}

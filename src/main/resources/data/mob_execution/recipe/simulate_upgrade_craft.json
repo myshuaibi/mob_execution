@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcb",
+    " d "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:name_tag"
+    },
+    "b": {
+      "item": "minecraft:iron_block"
+    },
+    "c": {
+      "item": "mob_execution:empty_upgrade_template"
+    },
+    "d": {
+      "item": "minecraft:armor_stand"
+    }
+  },
+  "result": {
+    "id": "mob_execution:simulate_upgrade",
+    "count": 1
+  }
+}

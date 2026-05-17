@@ -1,0 +1,17 @@
+{
+  "_fv": 85,
+  "_type": "anvilrecipe",
+  "definition": {
+    "leftitem": {
+      "value": "CUSTOM:ExecutionMachine"
+    },
+    "rightitem": {
+      "value": "Blocks.REDSTONE_BLOCK"
+    },
+    "rightcost": 3,
+    "xpcost": 4,
+    "output": {
+      "value": "CUSTOM:AutoExecutionMachine"
+    }
+  }
+}

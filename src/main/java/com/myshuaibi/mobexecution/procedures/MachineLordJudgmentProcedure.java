@@ -1,0 +1,24 @@
+package com.myshuaibi.mobexecution.procedures;
+
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.core.BlockPos;
+
+public class MachineLordJudgmentProcedure {
+	public static boolean execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
+			return false;
+		if ((entity.getStringUUID()).equals(getBlockNBTString(world, BlockPos.containing(x, y, z), "lord"))) {
+			return true;
+		}
+		return false;
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
+	}
+}

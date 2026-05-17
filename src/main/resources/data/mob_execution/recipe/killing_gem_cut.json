@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "mob_execution:coarse_ruby"
+  },
+  "result": {
+    "id": "mob_execution:killing_gem",
+    "count": 1
+  }
+}

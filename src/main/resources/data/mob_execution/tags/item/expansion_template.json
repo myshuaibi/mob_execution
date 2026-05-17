@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "mob_execution:overworld_expansion_template",
+    "mob_execution:nether_expansion_template",
+    "mob_execution:end_expansion_template"
+  ]
+}

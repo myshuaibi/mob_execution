@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=true": {
+      "model": "mob_execution:block/execution_machine_0"
+    },
+    "powered=false": {
+      "model": "mob_execution:block/execution_machine"
+    }
+  }
+}

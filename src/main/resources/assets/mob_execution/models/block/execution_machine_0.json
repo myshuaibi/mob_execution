@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "mob_execution:block/execution_machine_bottom",
+    "up": "mob_execution:block/execution_machine_top_powed",
+    "north": "mob_execution:block/execution_machine_side_powed",
+    "east": "mob_execution:block/execution_machine_side_powed",
+    "south": "mob_execution:block/execution_machine_side_powed",
+    "west": "mob_execution:block/execution_machine_side_powed",
+    "particle": "mob_execution:block/execution_machine_bottom"
+  },
+  "render_type": "solid"
+}

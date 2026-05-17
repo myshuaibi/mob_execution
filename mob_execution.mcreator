@@ -1,0 +1,1969 @@
+{
+  "mod_elements": [
+    {
+      "name": "ExecutionMachine",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "execution_machine",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/loot_table/blocks/execution_machine.json",
+          "src/main/resources/assets/mob_execution/models/item/execution_machine.json",
+          "src/main/java/com/myshuaibi/mobexecution/block/ExecutionMachineBlock.java",
+          "src/main/resources/assets/mob_execution/models/block/execution_machine.json",
+          "src/main/resources/assets/mob_execution/models/block/execution_machine_0.json",
+          "src/main/java/com/myshuaibi/mobexecution/block/entity/ExecutionMachineBlockEntity.java",
+          "src/main/resources/assets/mob_execution/blockstates/execution_machine.json"
+        ]
+      },
+      "path": "~/Machine/blocks/Common Machine"
+    },
+    {
+      "name": "MachineFindLord",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_find_lord",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/MachineFindLordProcedure.java"
+        ]
+      },
+      "path": "~/Machine/blocks"
+    },
+    {
+      "name": "MobExecution",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mob_execution",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "MachinePower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_power",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/MachinePowerProcedure.java"
+        ]
+      },
+      "path": "~/Machine/blocks/Common Machine"
+    },
+    {
+      "name": "MachinePowerFalse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_power_false",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/MachinePowerFalseProcedure.java"
+        ]
+      },
+      "path": "~/Machine/blocks/Common Machine"
+    },
+    {
+      "name": "ExecutionCommon",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "execution_common",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/damage_type/execution_common.json"
+        ]
+      },
+      "path": "~/Machine/damage"
+    },
+    {
+      "name": "EntityConditionCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_condition_check",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/EntityConditionCheckProcedure.java"
+        ],
+        "return_type": "logic"
+      },
+      "path": "~/event"
+    },
+    {
+      "name": "ExecutionUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "execution_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/ExecutionUseProcedure.java"
+        ]
+      },
+      "path": "~/event"
+    },
+    {
+      "name": "ExecutionDamageInvulnerableTimeDelete",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "execution_damage_invulnerable_time_delete",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/ExecutionDamageInvulnerableTimeDeleteProcedure.java"
+        ]
+      },
+      "path": "~/Machine/damage"
+    },
+    {
+      "name": "AutoExecutionMachine",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_execution_machine",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mob_execution/models/item/auto_execution_machine.json",
+          "src/main/resources/data/mob_execution/loot_table/blocks/auto_execution_machine.json",
+          "src/main/java/com/myshuaibi/mobexecution/block/AutoExecutionMachineBlock.java",
+          "src/main/resources/assets/mob_execution/blockstates/auto_execution_machine.json",
+          "src/main/resources/assets/mob_execution/models/block/auto_execution_machine.json",
+          "src/main/java/com/myshuaibi/mobexecution/block/entity/AutoExecutionMachineBlockEntity.java"
+        ]
+      },
+      "path": "~/Machine/blocks/Auto Machine"
+    },
+    {
+      "name": "ExecutionMachineLight",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "execution_machine_light",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/ExecutionMachineLightProcedure.java"
+        ]
+      },
+      "path": "~/Machine/blocks/Common Machine"
+    },
+    {
+      "name": "ExecutionMachineCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "execution_machine_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/advancement/recipes/execution_machine_craft.json",
+          "src/main/resources/data/mob_execution/recipe/execution_machine_craft.json"
+        ]
+      },
+      "path": "~/Machine/recipe"
+    },
+    {
+      "name": "AutoExecutionMachineSmith",
+      "type": "anvilrecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_execution_machine_smith",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/anvilrecipes/AutoExecutionMachineSmithAnvilRecipe.java"
+        ]
+      },
+      "path": "~/Machine/recipe"
+    },
+    {
+      "name": "EmptyUpgradeTemplate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_upgrade_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mob_execution/models/item/empty_upgrade_template.json",
+          "src/main/java/com/myshuaibi/mobexecution/item/EmptyUpgradeTemplateItem.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "EmptyUpgradeTemplateCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_upgrade_template_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/advancement/recipes/empty_upgrade_template_craft.json",
+          "src/main/resources/data/mob_execution/recipe/empty_upgrade_template_craft.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe"
+    },
+    {
+      "name": "MachineGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/world/inventory/MachineGuiMenu.java",
+          "src/main/java/com/myshuaibi/mobexecution/client/gui/MachineGuiScreen.java"
+        ]
+      },
+      "path": "~/Machine/gui"
+    },
+    {
+      "name": "MachineGuiTextReturn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_gui_text_return",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/MachineGuiTextReturnProcedure.java"
+        ]
+      },
+      "path": "~/Machine/gui/text"
+    },
+    {
+      "name": "MachineLordJudgment",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_lord_judgment",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/MachineLordJudgmentProcedure.java"
+        ]
+      },
+      "path": "~/Machine/blocks"
+    },
+    {
+      "name": "GetNameSpace",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_name_space",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/GetNameSpaceProcedure.java"
+        ]
+      },
+      "path": "~/event/commom"
+    },
+    {
+      "name": "MachineGuiTextExpansionTemplateReturn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_gui_text_expansion_template_return",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/MachineGuiTextExpansionTemplateReturnProcedure.java"
+        ]
+      },
+      "path": "~/Machine/gui/text"
+    },
+    {
+      "name": "MachineGuiTextUpgradeTemplateReturn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_gui_text_upgrade_template_return",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/MachineGuiTextUpgradeTemplateReturnProcedure.java"
+        ]
+      },
+      "path": "~/Machine/gui/text"
+    },
+    {
+      "name": "MobExecutionCommomSet",
+      "type": "config",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mob_execution_commom_set",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/configuration/MobExecutionCommomSetConfiguration.java"
+        ]
+      }
+    },
+    {
+      "name": "MachineProtection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_protection",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/MachineProtectionProcedure.java"
+        ]
+      },
+      "path": "~/Machine/blocks"
+    },
+    {
+      "name": "MachineGuiExpansionTemplatePut",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_gui_expansion_template_put",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/MachineGuiExpansionTemplatePutProcedure.java"
+        ]
+      },
+      "path": "~/Machine/gui"
+    },
+    {
+      "name": "MachineGuiUpgradeTemplatePut",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_gui_upgrade_template_put",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "slot",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/MachineGuiUpgradeTemplatePutProcedure.java"
+        ]
+      },
+      "path": "~/Machine/gui"
+    },
+    {
+      "name": "ShowMachineGui1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_machine_gui_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/ShowMachineGui1Procedure.java"
+        ]
+      },
+      "path": "~/Machine/gui/show_gui"
+    },
+    {
+      "name": "ShowMachineGui2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_machine_gui_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/ShowMachineGui2Procedure.java"
+        ]
+      },
+      "path": "~/Machine/gui/show_gui"
+    },
+    {
+      "name": "ShowMachineGui3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_machine_gui_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/ShowMachineGui3Procedure.java"
+        ]
+      },
+      "path": "~/Machine/gui/show_gui"
+    },
+    {
+      "name": "OverworldExpansionTemplate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overworld_expansion_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mob_execution/models/item/overworld_expansion_template.json",
+          "src/main/java/com/myshuaibi/mobexecution/item/OverworldExpansionTemplateItem.java"
+        ]
+      },
+      "path": "~/Template/Expansion Template"
+    },
+    {
+      "name": "NetherExpansionTemplate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_expansion_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mob_execution/models/item/nether_expansion_template.json",
+          "src/main/java/com/myshuaibi/mobexecution/item/NetherExpansionTemplateItem.java"
+        ]
+      },
+      "path": "~/Template/Expansion Template"
+    },
+    {
+      "name": "EndExpansionTemplate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_expansion_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mob_execution/models/item/end_expansion_template.json",
+          "src/main/java/com/myshuaibi/mobexecution/item/EndExpansionTemplateItem.java"
+        ]
+      },
+      "path": "~/Template/Expansion Template"
+    },
+    {
+      "name": "MachineText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/MachineTextProcedure.java"
+        ]
+      },
+      "path": "~/Machine/blocks/text"
+    },
+    {
+      "name": "ExpansionDetection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "expansion_detection",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/ExpansionDetectionProcedure.java"
+        ]
+      },
+      "path": "~/Machine/gui"
+    },
+    {
+      "name": "MachineProtectionUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machine_protection_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/MachineProtectionUseProcedure.java"
+        ]
+      },
+      "path": "~/Machine/blocks"
+    },
+    {
+      "name": "OverworldExpansionTemplateCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overworld_expansion_template_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/advancement/recipes/overworld_expansion_template_craft.json",
+          "src/main/resources/data/mob_execution/recipe/overworld_expansion_template_craft.json"
+        ]
+      },
+      "path": "~/Template/Expansion Template/recipe"
+    },
+    {
+      "name": "EmptyExpansionTemplate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_expansion_template",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/item/EmptyExpansionTemplateItem.java",
+          "src/main/resources/assets/mob_execution/models/item/empty_expansion_template.json"
+        ]
+      },
+      "path": "~/Template/Expansion Template"
+    },
+    {
+      "name": "NetherExpansionTemplateCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_expansion_template_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/recipe/nether_expansion_template_craft.json",
+          "src/main/resources/data/mob_execution/advancement/recipes/nether_expansion_template_craft.json"
+        ]
+      },
+      "path": "~/Template/Expansion Template/recipe"
+    },
+    {
+      "name": "EndExpansionTemplateCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_expansion_template_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/recipe/end_expansion_template_craft.json",
+          "src/main/resources/data/mob_execution/advancement/recipes/end_expansion_template_craft.json"
+        ]
+      },
+      "path": "~/Template/Expansion Template/recipe"
+    },
+    {
+      "name": "EasterEggUpgrade",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "easter_egg_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mob_execution/models/item/easter_egg_upgrade.json",
+          "src/main/java/com/myshuaibi/mobexecution/item/EasterEggUpgradeItem.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "EmptyExpansionTemplateSmith",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_expansion_template_smith",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/recipe/empty_expansion_template_smith.json",
+          "src/main/resources/data/mob_execution/advancement/recipes/empty_expansion_template_smith.json"
+        ]
+      },
+      "path": "~/Template/Expansion Template/recipe"
+    },
+    {
+      "name": "EasterEggUpgradeSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "easter_egg_upgrade_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/EasterEggUpgradeSpawnProcedure.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe/easter_egg"
+    },
+    {
+      "name": "MakeEasterEggUpgrade",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "make_easter_egg_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/advancement/make_easter_egg_upgrade.json"
+        ]
+      },
+      "path": "~/Achievement"
+    },
+    {
+      "name": "RootMobExecution",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "root_mob_execution",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/advancement/root_mob_execution.json"
+        ]
+      },
+      "path": "~/Achievement"
+    },
+    {
+      "name": "PoweredJudgment",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powered_judgment",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/PoweredJudgmentProcedure.java"
+        ]
+      },
+      "path": "~/Machine/blocks"
+    },
+    {
+      "name": "UpgradeGet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_get",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "tem",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/UpgradeGetProcedure.java"
+        ]
+      },
+      "path": "~/event"
+    },
+    {
+      "name": "ExecutionDamage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "execution_damage",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/ExecutionDamageProcedure.java"
+        ]
+      },
+      "path": "~/event"
+    },
+    {
+      "name": "ExecutionDied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "execution_died",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/ExecutionDiedProcedure.java"
+        ]
+      },
+      "path": "~/event"
+    },
+    {
+      "name": "EasterEggDo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "easter_egg_do",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/EasterEggDoProcedure.java"
+        ]
+      },
+      "path": "~/event/upgrade"
+    },
+    {
+      "name": "ExpansionDetectionItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "expansion_detection_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/ExpansionDetectionItemProcedure.java"
+        ]
+      },
+      "path": "~/event"
+    },
+    {
+      "name": "CreateUpgrade",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/item/CreateUpgradeItem.java",
+          "src/main/resources/assets/mob_execution/models/item/create_upgrade.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "CreateUpgradeText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_upgrade_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/CreateUpgradeTextProcedure.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/text"
+    },
+    {
+      "name": "ExecutionRealAdvanced",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "execution_real_advanced",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/damage_type/execution_real_advanced.json"
+        ]
+      },
+      "path": "~/Machine/damage"
+    },
+    {
+      "name": "ExecutionReal",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "execution_real",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/damage_type/execution_real.json"
+        ]
+      },
+      "path": "~/Machine/damage"
+    },
+    {
+      "name": "EfficiencyUpgrade",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "efficiency_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/item/EfficiencyUpgradeItem.java",
+          "src/main/resources/assets/mob_execution/models/item/efficiency_upgrade.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "EfficiencyUpgradeHigh",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "efficiency_upgrade_high",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/item/EfficiencyUpgradeHighItem.java",
+          "src/main/resources/assets/mob_execution/models/item/efficiency_upgrade_high.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "EfficiencyUpgradeText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "efficiency_upgrade_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/EfficiencyUpgradeTextProcedure.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/text"
+    },
+    {
+      "name": "RegenerationUpgrade",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "regeneration_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mob_execution/models/item/regeneration_upgrade.json",
+          "src/main/java/com/myshuaibi/mobexecution/item/RegenerationUpgradeItem.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "EfficiencyUpgradeCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "efficiency_upgrade_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/advancement/recipes/efficiency_upgrade_craft.json",
+          "src/main/resources/data/mob_execution/recipe/efficiency_upgrade_craft.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe"
+    },
+    {
+      "name": "EfficiencyUpgradeHighSmith",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "efficiency_upgrade_high_smith",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/advancement/recipes/efficiency_upgrade_high_smith.json",
+          "src/main/resources/data/mob_execution/recipe/efficiency_upgrade_high_smith.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe"
+    },
+    {
+      "name": "RegenerationUpgradeSmith",
+      "type": "anvilrecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "regeneration_upgrade_smith",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/anvilrecipes/RegenerationUpgradeSmithAnvilRecipe.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe"
+    },
+    {
+      "name": "RegenerationDo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "regeneration_do",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/RegenerationDoProcedure.java"
+        ]
+      },
+      "path": "~/event/upgrade"
+    },
+    {
+      "name": "RegenerationText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "regeneration_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/RegenerationTextProcedure.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/text"
+    },
+    {
+      "name": "SimulateUpgrade",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simulate_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/item/SimulateUpgradeItem.java",
+          "src/main/resources/assets/mob_execution/models/item/simulate_upgrade.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "SimulateUpgradeCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simulate_upgrade_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/advancement/recipes/simulate_upgrade_craft.json",
+          "src/main/resources/data/mob_execution/recipe/simulate_upgrade_craft.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe"
+    },
+    {
+      "name": "SimulateText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simulate_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/SimulateTextProcedure.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/text"
+    },
+    {
+      "name": "EasterEggSpawnDo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "easter_egg_spawn_do",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "num",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/EasterEggSpawnDoProcedure.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe/easter_egg"
+    },
+    {
+      "name": "RealDamageUpgrade",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "real_damage_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/item/RealDamageUpgradeItem.java",
+          "src/main/resources/assets/mob_execution/models/item/real_damage_upgrade.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "RealDamageUpgradeSmith",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "real_damage_upgrade_smith",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/recipe/real_damage_upgrade_smith.json",
+          "src/main/resources/data/mob_execution/advancement/recipes/real_damage_upgrade_smith.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe"
+    },
+    {
+      "name": "RealDamageText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "real_damage_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/RealDamageTextProcedure.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/text"
+    },
+    {
+      "name": "CoarseRuby",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coarse_ruby",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/item/CoarseRubyItem.java",
+          "src/main/resources/assets/mob_execution/models/item/coarse_ruby.json"
+        ]
+      },
+      "path": "~/extra"
+    },
+    {
+      "name": "KillingGem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "killing_gem",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/item/KillingGemItem.java",
+          "src/main/resources/assets/mob_execution/models/item/killing_gem.json"
+        ]
+      },
+      "path": "~/extra"
+    },
+    {
+      "name": "KillingGemCut",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "killing_gem_cut",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/recipe/killing_gem_cut.json",
+          "src/main/resources/data/mob_execution/advancement/recipes/killing_gem_cut.json"
+        ]
+      },
+      "path": "~/extra/recipe"
+    },
+    {
+      "name": "CoarseRubyInformation",
+      "type": "jeiinformation",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coarse_ruby_information",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/extra/recipe"
+    },
+    {
+      "name": "InfestationText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infestation_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/InfestationTextProcedure.java"
+        ]
+      },
+      "path": "~/extra/event"
+    },
+    {
+      "name": "InfestationDo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infestation_do",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/InfestationDoProcedure.java"
+        ]
+      },
+      "path": "~/extra/event"
+    },
+    {
+      "name": "TransmissionUpgrade",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transmission_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mob_execution/models/item/transmission_upgrade.json",
+          "src/main/java/com/myshuaibi/mobexecution/item/TransmissionUpgradeItem.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "TransmissionUpgradeCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transmission_upgrade_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/recipe/transmission_upgrade_craft.json",
+          "src/main/resources/data/mob_execution/advancement/recipes/transmission_upgrade_craft.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe"
+    },
+    {
+      "name": "TransmissionText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transmission_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/TransmissionTextProcedure.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/text"
+    },
+    {
+      "name": "GetLordFromUuid",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_lord_from_uuid",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "text",
+            "type": "string"
+          }
+        ],
+        "return_type": "entity",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/GetLordFromUuidProcedure.java"
+        ]
+      },
+      "path": "~/event/commom"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:AutoExecutionMachine",
+      "~CUSTOM:ExecutionMachine"
+    ],
+    "BLOCKS:mod:all_machine": [
+      "CUSTOM:ExecutionMachine",
+      "CUSTOM:AutoExecutionMachine"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:AutoExecutionMachine",
+      "~CUSTOM:ExecutionMachine"
+    ],
+    "ENTITIES:c:boss": [
+      "EntityDragon",
+      "EntityWither"
+    ],
+    "DAMAGE_TYPES:mod:execution_damage": [
+      "CUSTOM:ExecutionCommon",
+      "CUSTOM:ExecutionReal",
+      "CUSTOM:ExecutionRealAdvanced"
+    ],
+    "DAMAGE_TYPES:minecraft:no_knockback": [
+      "#mod:execution_damage"
+    ],
+    "ITEMS:mod:expansion_template": [
+      "CUSTOM:OverworldExpansionTemplate",
+      "CUSTOM:NetherExpansionTemplate",
+      "CUSTOM:EndExpansionTemplate"
+    ],
+    "ITEMS:mod:upgrade_template": [
+      "CUSTOM:CreateUpgrade",
+      "CUSTOM:EasterEggUpgrade",
+      "CUSTOM:EfficiencyUpgrade",
+      "CUSTOM:EfficiencyUpgradeHigh",
+      "CUSTOM:RegenerationUpgrade",
+      "CUSTOM:SimulateUpgrade",
+      "CUSTOM:RealDamageUpgrade",
+      "CUSTOM:TransmissionUpgrade"
+    ],
+    "DAMAGE_TYPES:minecraft:bypasses_armor": [
+      "CUSTOM:ExecutionReal",
+      "CUSTOM:ExecutionRealAdvanced"
+    ],
+    "DAMAGE_TYPES:minecraft:bypasses_cooldown": [
+      "CUSTOM:ExecutionReal",
+      "CUSTOM:ExecutionRealAdvanced"
+    ],
+    "DAMAGE_TYPES:minecraft:bypasses_effects": [
+      "CUSTOM:ExecutionRealAdvanced"
+    ],
+    "DAMAGE_TYPES:minecraft:bypasses_enchantments": [
+      "CUSTOM:ExecutionReal",
+      "CUSTOM:ExecutionRealAdvanced"
+    ],
+    "DAMAGE_TYPES:minecraft:bypasses_shield": [
+      "CUSTOM:ExecutionRealAdvanced"
+    ]
+  },
+  "tab_element_order": {
+    "CUSTOM:MobExecution": [
+      "ExecutionMachine",
+      "AutoExecutionMachine",
+      "CoarseRuby",
+      "KillingGem",
+      "EmptyUpgradeTemplate",
+      "CreateUpgrade",
+      "EfficiencyUpgrade",
+      "EfficiencyUpgradeHigh",
+      "RealDamageUpgrade",
+      "RegenerationUpgrade",
+      "SimulateUpgrade",
+      "TransmissionUpgrade",
+      "EmptyExpansionTemplate",
+      "OverworldExpansionTemplate",
+      "NetherExpansionTemplate",
+      "EndExpansionTemplate"
+    ]
+  },
+  "language_map": {
+    "en_us": {
+      "block.mob_execution.execution_machine": "Execution Machine",
+      "item_group.mob_execution.mob_execution": "Mob Execution",
+      "death.attack.execution_common.item": "%1$s was executed by %2$s using %3$s",
+      "death.attack.execution_common": "%1$s was executed",
+      "death.attack.execution_common.player": "%1$s executed whilst trying to escape %2$s",
+      "block.mob_execution.auto_execution_machine": "Auto Execution Machine",
+      "item.mob_execution.empty_upgrade_template": "Empty Upgrade Template",
+      "gui.mob_execution.machine.title": "Execution Machine",
+      "gui.mob_execution.expansion.title": "Expansion slot",
+      "gui.mob_execution.upgrade.title": "Upgrade slot",
+      "mob_execution.configuration.limit_max_health": "limit_max_health",
+      "mob_execution.configuration.machine_protection": "machine_protection",
+      "item.mob_execution.overworld_expansion_template": "Overworld Expansion Template",
+      "item.mob_execution.nether_expansion_template": "Nether Expansion Template",
+      "item.mob_execution.end_expansion_template": "End Expansion Template",
+      "item.mob_execution.machine.description_0": "§7Can carry out rapid execution on eligible entities",
+      "item.mob_execution.machine.description_1": "View entities that meet the criteria by [SHIRT]",
+      "item.mob_execution.machine.description_2": "§7--Maximum HP ≤ ",
+      "item.mob_execution.machine.description_3": "§7--Monster entity",
+      "item.mob_execution.machine.description_4": "§7--Not BOSS",
+      "item.mob_execution.machine.description_5": "§7--No target of hatred",
+      "item.mob_execution.machine.description_6": "§7--From Minecraft",
+      "item.mob_execution.machine.description_7": "§7--Not Lord",
+      "mob_execution.configuration.basic_execution": "basic_execution",
+      "item.mob_execution.empty_expansion_template": "Empty Expansion Template",
+      "item.mob_execution.easter_egg_upgrade": "Easter Egg Upgrade",
+      "item.mob_execution.easter_egg_upgrade.description_0": "§3Play ear-piercing sound effects and dazzling visual effects when executing entities",
+      "mob_execution.configuration.precision_mode": "precision_mode",
+      "advancements.make_easter_egg_upgrade.descr": "§9Forge the most §r§museless§r§9 great upgrade template using divinely-infused lightning",
+      "advancements.make_easter_egg_upgrade.title": "Heavenly Thunder Forging Soldiers",
+      "advancements.root_mob_execution.title": "Mob Execution",
+      "advancements.root_mob_execution.descr": "Create an execution machine that belongs solely to you",
+      "item.mob_execution.create_upgrade": "Create Upgrade",
+      "item.mob_execution.create_upgrade.description_0": "§3--Remove all execution restrictions except for Article 6",
+      "item.mob_execution.create_upgrade.description_1": "§3--Single hit damage increased to infinity",
+      "item.mob_execution.create_upgrade.description_2": "§3--Use advanced true damage type",
+      "death.attack.execution_real_advanced": "%1$s was executed",
+      "death.attack.execution_real_advanced.item": "%1$s was executed by %2$s using %3$s",
+      "death.attack.execution_real_advanced.player": "%1$s executed whilst trying to escape %2$s",
+      "death.attack.execution_real.player": "%1$s executed whilst trying to escape %2$s",
+      "death.attack.execution_real": "%1$s was executed",
+      "death.attack.execution_real.item": "%1$s was executed by %2$s using %3$s",
+      "item.mob_execution.efficiency_upgrade": "Efficiency Upgrade",
+      "item.mob_execution.efficiency_upgrade_high": "Efficiency Upgrade High",
+      "item.mob_execution.efficiency_upgrade.description_0": "§3Single hit damage * ",
+      "item.mob_execution.regeneration_upgrade": "Regeneration Upgrade",
+      "item.mob_execution.regeneration_upgrade.description_0": "§3Spawn the same type of entity in place when an entity is killed",
+      "item.mob_execution.regeneration_upgrade.description_1": "§3-The generated item has a 1.5s resistance V",
+      "item.mob_execution.regeneration_upgrade.description_2": "§3-Each template provides a 20% probability",
+      "item.mob_execution.simulate_upgrade": "Simulate Upgrade",
+      "item.mob_execution.simulate_upgrade.description_0": "§3Attack the entity in the name of the master",
+      "item.mob_execution.real_damage_upgrade": "Real Damage Upgrade",
+      "item.mob_execution.real_damage_upgrade.description_0": "§3Execute entities with real damage",
+      "item.mob_execution.coarse_ruby": "Coarse Ruby",
+      "item.mob_execution.killing_gem": "Killing Gem",
+      "jei.mob_execution.coarse_ruby_information": "Give with the magic of emerald mixed with lapis lazuli on the execution machine",
+      "item.mob_execution.infestation.description_0": "Attack Damage",
+      "item.mob_execution.transmission_upgrade": "Transmission Upgrade",
+      "mob_execution.configuration.infestation_amount": "infestation_amount",
+      "item.mob_execution.transmission_upgrade.description_0": "§3Can transfer the experience and items from the execution machine to the master.",
+      "item.mob_execution.transmission_upgrade.description_1": "§3--Warning: The master is in a dangerous area (e.g., lava), which may cause item loss"
+    },
+    "zh_cn": {
+      "block.mob_execution.execution_machine": "处决机",
+      "item_group.mob_execution.mob_execution": "生物处决",
+      "death.attack.execution_common.item": "%1$s被%2$s使用%3$s处决了",
+      "death.attack.execution_common": "%1$s被处决了",
+      "death.attack.execution_common.player": "%1$s在试图逃离%2$s时被处决了",
+      "block.mob_execution.auto_execution_machine": "自动处决机",
+      "item.mob_execution.empty_upgrade_template": "空白升级模板",
+      "gui.mob_execution.machine.title": "处决机",
+      "gui.mob_execution.expansion.title": "扩容槽",
+      "gui.mob_execution.upgrade.title": "升级槽",
+      "mob_execution.configuration.limit_max_health": "限制最大生命值",
+      "mob_execution.configuration.machine_protection": "机器保护",
+      "item.mob_execution.overworld_expansion_template": "主世界扩容模板",
+      "item.mob_execution.nether_expansion_template": "下界扩容模板",
+      "item.mob_execution.end_expansion_template": "末地扩容模板",
+      "item.mob_execution.machine.description_0": "§7可以对符合条件的实体进行快速处决",
+      "item.mob_execution.machine.description_1": "按[SHIRT]查看符合条件的实体",
+      "item.mob_execution.machine.description_2": "§7--最大生命值 ≤ ",
+      "item.mob_execution.machine.description_3": "§7--敌对实体",
+      "item.mob_execution.machine.description_4": "§7--非BOSS",
+      "item.mob_execution.machine.description_5": "§7--无仇恨目标",
+      "item.mob_execution.machine.description_6": "§7--来自原版",
+      "item.mob_execution.machine.description_7": "§7--非主人",
+      "mob_execution.configuration.basic_execution": "基础处决",
+      "item.mob_execution.empty_expansion_template": "空白扩容模板",
+      "item.mob_execution.easter_egg_upgrade": "彩蛋升级",
+      "item.mob_execution.easter_egg_upgrade.description_0": "§3处决实体时播放炸耳音效和炫目特效",
+      "mob_execution.configuration.precision_mode": "精准模式",
+      "advancements.make_easter_egg_upgrade.descr": "§9使用富含神性的雷电锻造出最§r§m没用§r§9伟大的升级模板",
+      "advancements.make_easter_egg_upgrade.title": "天雷锻兵",
+      "advancements.root_mob_execution.title": "生物处决",
+      "advancements.root_mob_execution.descr": "制造出独属于你的处决机器吧",
+      "item.mob_execution.create_upgrade": "创造升级",
+      "item.mob_execution.create_upgrade.description_0": "§3--移除非第6条的所有处决限制",
+      "item.mob_execution.create_upgrade.description_1": "§3--单次伤害量提升至无穷",
+      "item.mob_execution.create_upgrade.description_2": "§3--使用高级真伤伤害类型",
+      "death.attack.execution_real_advanced": "%1$s被处决了",
+      "death.attack.execution_real_advanced.item": "%1$s被%2$s使用%3$s处决了",
+      "death.attack.execution_real_advanced.player": "%1$s在试图逃离%2$s时被处决了",
+      "death.attack.execution_real.player": "%1$s在试图逃离%2$s时被处决了",
+      "death.attack.execution_real": "%1$s被处决了",
+      "death.attack.execution_real.item": "%1$s被%2$s使用%3$s处决了",
+      "item.mob_execution.efficiency_upgrade": "效率升级",
+      "item.mob_execution.efficiency_upgrade_high": "高级效率升级",
+      "item.mob_execution.efficiency_upgrade.description_0": "§3单次伤害量 + ",
+      "item.mob_execution.regeneration_upgrade": "再生升级",
+      "item.mob_execution.regeneration_upgrade.description_0": "§3杀死实体时在原地生成同类型实体",
+      "item.mob_execution.regeneration_upgrade.description_1": "§3-生成物拥有1.5s的抗性提升V",
+      "item.mob_execution.regeneration_upgrade.description_2": "§3-每个模板提供20%概率",
+      "item.mob_execution.simulate_upgrade": "模拟升级",
+      "item.mob_execution.simulate_upgrade.description_0": "§3以主人的名义攻击实体",
+      "item.mob_execution.real_damage_upgrade": "真伤升级",
+      "item.mob_execution.real_damage_upgrade.description_0": "§3使用真实伤害处决实体",
+      "item.mob_execution.coarse_ruby": "粗制红宝石",
+      "item.mob_execution.killing_gem": "杀戮宝石",
+      "jei.mob_execution.coarse_ruby_information": "用绿宝石混合青金石的魔力在处决机上得到",
+      "item.mob_execution.infestation.description_0": "攻击伤害",
+      "item.mob_execution.transmission_upgrade": "传输升级",
+      "mob_execution.configuration.infestation_amount": "染咒数值",
+      "item.mob_execution.transmission_upgrade.description_0": "§3可将处决机上的经验和物品传输到主人身上",
+      "item.mob_execution.transmission_upgrade.description_1": "§3--警告:主人处在危险地带(e.g.岩浆)可能导致物品丢失"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModScreens.java",
+      "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModMenus.java",
+      "src/main/java/com/myshuaibi/mobexecution/network/MenuStateUpdateMessage.java",
+      "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModJeiInformation.java",
+      "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModBrewingRecipes.java",
+      "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModConfigs.java",
+      "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModAnvilRecipes.java",
+      "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModBlocks.java",
+      "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModBlockEntities.java",
+      "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModItems.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/com/myshuaibi/mobexecution/MobExecutionMod.java",
+      "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModTabs.java"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Machine",
+        "children": [
+          {
+            "name": "blocks",
+            "children": [
+              {
+                "name": "Common Machine",
+                "children": []
+              },
+              {
+                "name": "Auto Machine",
+                "children": []
+              },
+              {
+                "name": "text",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "recipe",
+            "children": []
+          },
+          {
+            "name": "gui",
+            "children": [
+              {
+                "name": "text",
+                "children": []
+              },
+              {
+                "name": "show_gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "damage",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Template",
+        "children": [
+          {
+            "name": "Upgrade Template",
+            "children": [
+              {
+                "name": "recipe",
+                "children": [
+                  {
+                    "name": "easter_egg",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "text",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Expansion Template",
+            "children": [
+              {
+                "name": "recipe",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Achievement",
+        "children": []
+      },
+      {
+        "name": "event",
+        "children": [
+          {
+            "name": "upgrade",
+            "children": []
+          },
+          {
+            "name": "commom",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "extra",
+        "children": [
+          {
+            "name": "recipe",
+            "children": []
+          },
+          {
+            "name": "event",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "mob_execution",
+    "modName": "Mob Execution",
+    "version": "0.0.1",
+    "description": "None",
+    "author": "myshuaibi",
+    "websiteURL": "https://myshuaibi.dpdns.org/",
+    "license": "GNU Lesser General Public License version 2.1 (LGPLv2.1)",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "jei"
+    ],
+    "currentGenerator": "neoforge-1.21.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "com.myshuaibi.mobexecution"
+  },
+  "mcreatorVersion": 202600114619
+}
