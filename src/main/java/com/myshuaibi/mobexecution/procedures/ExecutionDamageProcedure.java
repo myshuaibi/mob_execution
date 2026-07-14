@@ -2,6 +2,7 @@ package com.myshuaibi.mobexecution.procedures;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.resources.ResourceLocation;
@@ -9,6 +10,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
+import com.myshuaibi.mobexecution.init.MobExecutionModItems;
 import com.myshuaibi.mobexecution.configuration.MobExecutionCommomSetConfiguration;
 
 public class ExecutionDamageProcedure {
@@ -17,18 +19,18 @@ public class ExecutionDamageProcedure {
 			return;
 		double multiple = 0;
 		Entity sourceentity = null;
-		multiple = UpgradeGetProcedure.execute(world, x, y, z, "efficiency");
+		multiple = UpgradeGetProcedure.execute(world, x, y, z, new ItemStack(MobExecutionModItems.EFFICIENCY_UPGRADE.get()));
 		if (!(multiple > 0)) {
 			multiple = 1;
 		}
-		if (UpgradeGetProcedure.execute(world, x, y, z, "simulate") > 0) {
+		if (UpgradeGetProcedure.execute(world, x, y, z, new ItemStack(MobExecutionModItems.SIMULATE_UPGRADE.get())) > 0) {
 			if (!world.isClientSide()) {
 				sourceentity = GetLordFromUuidProcedure.execute(getBlockNBTString(world, BlockPos.containing(x, y - 1, z), "lord"));
 			}
 		}
-		if (UpgradeGetProcedure.execute(world, x, y, z, "create") > 0) {
-			entity.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("mob_execution:execution_real_advanced"))), sourceentity), (float) (3.4 * Math.pow(10, 38)));
-		} else if (UpgradeGetProcedure.execute(world, x, y, z, "real_damage") > 0) {
+		if (UpgradeGetProcedure.execute(world, x, y, z, new ItemStack(MobExecutionModItems.CREATE_UPGRADE.get())) > 0) {
+			entity.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("mob_execution:execution_real_advanced"))), sourceentity), (float) Float.MAX_VALUE);
+		} else if (UpgradeGetProcedure.execute(world, x, y, z, new ItemStack(MobExecutionModItems.REAL_DAMAGE_UPGRADE.get())) > 0) {
 			entity.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("mob_execution:execution_real"))), sourceentity),
 					(float) ((double) MobExecutionCommomSetConfiguration.BASIC_EXECUTION.get() * multiple));
 		} else {

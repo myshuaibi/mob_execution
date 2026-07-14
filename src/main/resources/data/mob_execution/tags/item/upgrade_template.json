@@ -2,12 +2,17 @@
   "replace": false,
   "values": [
     "mob_execution:create_upgrade",
+    "mob_execution:looting_upgrade_high",
+    "mob_execution:limit_break_upgrade",
+    "mob_execution:looting_upgrade",
+    "mob_execution:efficiency_upgrade_high",
+    "mob_execution:easter_egg_upgrade",
+    "mob_execution:limit_break_high_upgrade",
+    "mob_execution:simulate_upgrade",
+    "mob_execution:infinite_upgrade",
     "mob_execution:real_damage_upgrade",
     "mob_execution:regeneration_upgrade",
     "mob_execution:efficiency_upgrade",
-    "mob_execution:efficiency_upgrade_high",
-    "mob_execution:easter_egg_upgrade",
-    "mob_execution:simulate_upgrade",
     "mob_execution:transmission_upgrade"
   ]
 }

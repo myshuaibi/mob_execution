@@ -27,12 +27,12 @@ public class MobExecutionModAnvilRecipes implements IModPlugin {
 		IVanillaRecipeFactory factory = registration.getVanillaRecipeFactory();
 		List<IJeiAnvilRecipe> anvilRecipes = new ArrayList<>();
 		ItemStack rightItem = ItemStack.EMPTY;
-		rightItem = new ItemStack(Blocks.REDSTONE_BLOCK);
-		rightItem.setCount(3);
-		anvilRecipes.add(factory.createAnvilRecipe(new ItemStack(MobExecutionModBlocks.EXECUTION_MACHINE.get()), List.of(rightItem.copy()), List.of(new ItemStack(MobExecutionModBlocks.AUTO_EXECUTION_MACHINE.get()))));
 		rightItem = new ItemStack(Items.TOTEM_OF_UNDYING);
 		rightItem.setCount(1);
 		anvilRecipes.add(factory.createAnvilRecipe(new ItemStack(MobExecutionModItems.EMPTY_UPGRADE_TEMPLATE.get()), List.of(rightItem.copy()), List.of(new ItemStack(MobExecutionModItems.REGENERATION_UPGRADE.get()))));
+		rightItem = new ItemStack(Blocks.REDSTONE_BLOCK);
+		rightItem.setCount(4);
+		anvilRecipes.add(factory.createAnvilRecipe(new ItemStack(MobExecutionModBlocks.EXECUTION_MACHINE.get()), List.of(rightItem.copy()), List.of(new ItemStack(MobExecutionModBlocks.AUTO_EXECUTION_MACHINE.get()))));
 		registration.addRecipes(RecipeTypes.ANVIL, anvilRecipes);
 	}
 }

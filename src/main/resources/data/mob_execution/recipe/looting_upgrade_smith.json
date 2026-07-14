@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mob_execution:end_expansion_template"
+  },
+  "base": {
+    "item": "mob_execution:looting_upgrade"
+  },
+  "addition": {
+    "type": "neoforge:components",
+    "items": "minecraft:enchanted_book",
+    "components": {
+      "minecraft:stored_enchantments": {
+        "levels": {
+          "minecraft:looting": 4
+        }
+      }
+    },
+    "strict": false
+  },
+  "result": {
+    "id": "mob_execution:looting_upgrade_high",
+    "count": 1
+  }
+}

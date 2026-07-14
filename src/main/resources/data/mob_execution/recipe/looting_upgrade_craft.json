@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "ded",
+    "fgf"
+  ],
+  "key": {
+    "a": {
+      "item": "mob_execution:overworld_expansion_template"
+    },
+    "b": {
+      "item": "mob_execution:empty_expansion_template"
+    },
+    "c": {
+      "item": "mob_execution:nether_expansion_template"
+    },
+    "d": {
+      "tag": "minecraft:enchantable/weapon"
+    },
+    "e": {
+      "item": "mob_execution:efficiency_upgrade"
+    },
+    "f": {
+      "type": "neoforge:components",
+      "items": "minecraft:enchanted_book",
+      "components": {
+        "minecraft:stored_enchantments": {
+          "levels": {
+            "minecraft:looting": 3
+          }
+        }
+      },
+      "strict": false
+    },
+    "g": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "result": {
+    "id": "mob_execution:looting_upgrade",
+    "count": 1
+  }
+}

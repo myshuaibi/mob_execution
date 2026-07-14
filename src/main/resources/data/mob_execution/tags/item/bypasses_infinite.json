@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "mob_execution:create_upgrade",
+    "mob_execution:easter_egg_upgrade",
+    "mob_execution:infinite_upgrade"
+  ]
+}

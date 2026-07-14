@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
+    "item": "mob_execution:nether_expansion_template"
   },
   "base": {
     "item": "mob_execution:empty_upgrade_template"

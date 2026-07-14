@@ -8,8 +8,8 @@
     "rightitem": {
       "value": "Blocks.REDSTONE_BLOCK"
     },
-    "rightcost": 3,
-    "xpcost": 4,
+    "rightcost": 4,
+    "xpcost": 3,
     "output": {
       "value": "CUSTOM:AutoExecutionMachine"
     }

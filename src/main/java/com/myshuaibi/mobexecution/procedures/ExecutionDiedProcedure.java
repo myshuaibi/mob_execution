@@ -8,6 +8,7 @@ import net.neoforged.bus.api.Event;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
@@ -18,6 +19,7 @@ import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
+import com.myshuaibi.mobexecution.init.MobExecutionModItems;
 import com.myshuaibi.mobexecution.configuration.MobExecutionCommomSetConfiguration;
 
 @EventBusSubscriber
@@ -50,13 +52,12 @@ public class ExecutionDiedProcedure {
 			}
 		}
 		if (result) {
-			if (UpgradeGetProcedure.execute(world, x, y, z, "easter_egg") > 0) {
+			if (UpgradeGetProcedure.execute(world, x, y, z, new ItemStack(MobExecutionModItems.EASTER_EGG_UPGRADE.get())) > 0) {
 				EasterEggDoProcedure.execute(world, x, y, z);
 			}
-			if (UpgradeGetProcedure.execute(world, x, y, z, "regeneration") > 0) {
-				tmp = UpgradeGetProcedure.execute(world, x, y, z, "regeneration");
+			if (UpgradeGetProcedure.execute(world, x, y, z, new ItemStack(MobExecutionModItems.REGENERATION_UPGRADE.get())) > 0) {
 				if (!(entity instanceof Player)) {
-					if (Math.random() < 0.2 * tmp) {
+					if (Math.random() < 0.2 * UpgradeGetProcedure.execute(world, x, y, z, new ItemStack(MobExecutionModItems.REGENERATION_UPGRADE.get()))) {
 						RegenerationDoProcedure.execute(world, x, y, z, entity);
 					}
 				}

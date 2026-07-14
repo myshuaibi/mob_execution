@@ -13,7 +13,7 @@ public class EasterEggSpawnDoProcedure {
 		item = new ItemStack(MobExecutionModItems.EASTER_EGG_UPGRADE.get()).copy();
 		item.setCount((int) num);
 		if (world instanceof ServerLevel _level) {
-			ItemEntity entityToSpawn = new ItemEntity(_level, x, (y + 0.5), z, item);
+			ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, item);
 			entityToSpawn.setPickUpDelay(0);
 			entityToSpawn.setUnlimitedLifetime();
 			_level.addFreshEntity(entityToSpawn);

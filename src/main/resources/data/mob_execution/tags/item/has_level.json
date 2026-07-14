@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "mob_execution:efficiency_upgrade",
+    "mob_execution:looting_upgrade"
+  ]
+}

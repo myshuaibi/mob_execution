@@ -11,6 +11,9 @@
       },
       {
         "value": "CUSTOM:EmptyUpgradeTemplate"
+      },
+      {
+        "value": "TAG:c:obsidians"
       }
     ],
     "cookingBookCategory": "MISC",

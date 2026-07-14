@@ -26,22 +26,22 @@
         "value": "TAG:minecraft:swords"
       },
       {
-        "value": "Blocks.SMOOTH_STONE"
+        "value": "TAG:c:obsidians"
       },
       {
         "value": "Items.REDSTONE"
       },
       {
-        "value": "Blocks.SMOOTH_STONE"
+        "value": "TAG:c:obsidians"
       },
       {
-        "value": "Blocks.SMOOTH_STONE"
+        "value": "TAG:c:obsidians"
       },
       {
-        "value": "Blocks.SMOOTH_STONE"
+        "value": "TAG:c:obsidians"
       },
       {
-        "value": "Blocks.SMOOTH_STONE"
+        "value": "TAG:c:obsidians"
       }
     ],
     "recipeReturnStack": {

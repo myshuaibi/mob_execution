@@ -14,9 +14,9 @@ public class AutoExecutionMachineSmithAnvilRecipe {
 	@SubscribeEvent
 	public static void execute(AnvilUpdateEvent event) {
 		if ((event.getLeft().getItem() == MobExecutionModBlocks.EXECUTION_MACHINE.get().asItem()) && (event.getRight().getItem() == Blocks.REDSTONE_BLOCK.asItem())) {
-			if ((event.getLeft().getCount() == 1) && (event.getRight().getCount() >= 3)) {
-				event.setMaterialCost(3);
-				event.setCost(4);
+			if ((event.getLeft().getCount() == 1) && (event.getRight().getCount() >= 4)) {
+				event.setMaterialCost(4);
+				event.setCost(3);
 				event.setOutput(new ItemStack(MobExecutionModBlocks.AUTO_EXECUTION_MACHINE.get()));
 			}
 		}

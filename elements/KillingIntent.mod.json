@@ -1,0 +1,39 @@
+{
+  "_fv": 85,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Killing Intent",
+    "icon": "killing_intent",
+    "color": {
+      "value": -3663586,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "HARMFUL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredbyHoney": false,
+    "modifiers": [
+      {
+        "equipmentSlot": "any",
+        "attribute": {
+          "value": "ATTACK_DAMAGE"
+        },
+        "amount": 1.5,
+        "operation": "ADD_VALUE"
+      }
+    ],
+    "onStarted": {
+      "name": "KillingIntentStart"
+    },
+    "onActiveTick": {
+      "name": "KillingIntentDo"
+    },
+    "activeTickCondition": {
+      "name": "KillingIntentUse"
+    }
+  }
+}

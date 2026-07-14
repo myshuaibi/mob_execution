@@ -15,14 +15,11 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
-import com.myshuaibi.mobexecution.MobExecutionMod;
-
 public class RegenerationDoProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		Entity spawned = null;
-		double i = 0;
 		if (world instanceof ServerLevel level) {
 			EntityType<?> type = entity.getType();
 			spawned = type.spawn(level, BlockPos.containing(x, y + 0.3, z), MobSpawnType.MOB_SUMMONED);
@@ -61,13 +58,6 @@ public class RegenerationDoProcedure {
 					}.armorSlotByIndex((int) index0), new ItemStack(Blocks.AIR));
 				}
 			}
-		}
-		if (false) {
-			MobExecutionMod.LOGGER.info(x);
-			MobExecutionMod.LOGGER.info(y);
-			MobExecutionMod.LOGGER.info(z);
-			MobExecutionMod.LOGGER.info(world.isClientSide());
-			MobExecutionMod.LOGGER.info(entity);
 		}
 	}
 }

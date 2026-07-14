@@ -19,8 +19,6 @@ import javax.annotation.Nullable;
 
 import java.util.List;
 
-import com.myshuaibi.mobexecution.configuration.MobExecutionCommomSetConfiguration;
-
 @EventBusSubscriber(value = {Dist.CLIENT})
 public class MachineTextProcedure {
 	@OnlyIn(Dist.CLIENT)
@@ -36,15 +34,9 @@ public class MachineTextProcedure {
 	private static void execute(@Nullable Event event, ItemStack itemstack, List<Component> tooltip) {
 		if (tooltip == null)
 			return;
-		double health = 0;
 		if ((itemstack.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()).is(BlockTags.create(ResourceLocation.parse("mob_execution:all_machine")))) {
-			if ((double) MobExecutionCommomSetConfiguration.LIMIT_MAX_HEALTH.get() >= 0) {
-				health = (double) MobExecutionCommomSetConfiguration.LIMIT_MAX_HEALTH.get();
-			} else {
-				health = Double.POSITIVE_INFINITY;
-			}
 			if (Screen.hasShiftDown()) {
-				tooltip.add(Component.literal((Component.translatable("item.mob_execution.machine.description_2").getString() + "" + health)));
+				tooltip.add(Component.literal((Component.translatable("item.mob_execution.machine.description_2").getString() + "" + DoubleTurnIntProcedure.execute(LimitHealthProcedure.execute()))));
 				tooltip.add(Component.literal((Component.translatable("item.mob_execution.machine.description_3").getString())));
 				tooltip.add(Component.literal((Component.translatable("item.mob_execution.machine.description_4").getString())));
 				tooltip.add(Component.literal((Component.translatable("item.mob_execution.machine.description_5").getString())));

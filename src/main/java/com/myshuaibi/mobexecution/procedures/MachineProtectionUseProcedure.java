@@ -18,7 +18,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
@@ -48,16 +50,27 @@ public class MachineProtectionUseProcedure {
 						if (event instanceof ICancellableEvent _cancellable) {
 							_cancellable.setCanceled(true);
 						}
-						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).shrink(1);
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x, y, z);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null) {
-								_blockEntity.getPersistentData().putDouble("infection_rate", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "infection_rate") + 1));
+						if (!(entity instanceof Player _plrCldCheck6 && _plrCldCheck6.getCooldowns().isOnCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()))) {
+							if (entity instanceof Player _player)
+								_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 15);
+							(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).shrink(1);
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("mob_execution:block.execution_machine.use")), SoundSource.NEUTRAL, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("mob_execution:block.execution_machine.use")), SoundSource.NEUTRAL, 1, 1, false);
+								}
 							}
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+							if (!world.isClientSide()) {
+								BlockPos _bp = BlockPos.containing(x, y, z);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_blockEntity != null) {
+									_blockEntity.getPersistentData().putDouble("infection_rate", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "infection_rate") + 1));
+								}
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+							}
 						}
 					}
 				}
@@ -65,23 +78,42 @@ public class MachineProtectionUseProcedure {
 					if (event instanceof ICancellableEvent _cancellable) {
 						_cancellable.setCanceled(true);
 					}
-					(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).shrink(1);
-					if (Math.random() < 0.25 + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "infection_rate") * 0.1) {
-						if (entity instanceof Player _player) {
-							ItemStack _setstack = new ItemStack(MobExecutionModItems.COARSE_RUBY.get()).copy();
-							_setstack.setCount(1);
-							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					if (!(entity instanceof Player _plrCldCheck17 && _plrCldCheck17.getCooldowns().isOnCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem()))) {
+						if (entity instanceof Player _player)
+							_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 25);
+						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).shrink(1);
+						if (Math.random() < 0.25 + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "infection_rate") * 0.1) {
+							if (entity instanceof Player _player) {
+								ItemStack _setstack = new ItemStack(MobExecutionModItems.COARSE_RUBY.get()).copy();
+								_setstack.setCount(1);
+								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							}
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.smithing_table.use")), SoundSource.NEUTRAL, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.smithing_table.use")), SoundSource.NEUTRAL, 1, 1, false);
+								}
+							}
+						} else {
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("mob_execution:block.execution_machine.use")), SoundSource.NEUTRAL, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("mob_execution:block.execution_machine.use")), SoundSource.NEUTRAL, 1, 1, false);
+								}
+							}
 						}
-					}
-					if (!world.isClientSide()) {
-						BlockPos _bp = BlockPos.containing(x, y, z);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null) {
-							_blockEntity.getPersistentData().putDouble("infection_rate", 0);
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null) {
+								_blockEntity.getPersistentData().putDouble("infection_rate", 0);
+							}
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
 				}
 			} else {

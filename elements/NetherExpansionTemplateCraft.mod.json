@@ -8,9 +8,6 @@
     "unlockingItems": [
       {
         "value": "CUSTOM:EmptyExpansionTemplate"
-      },
-      {
-        "value": "Blocks.ANCIENT_DEBRIS"
       }
     ],
     "cookingBookCategory": "MISC",
@@ -20,31 +17,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Blocks.ANCIENT_DEBRIS"
+        "value": "Blocks.CRYING_OBSIDIAN"
       },
       {
-        "value": "Blocks.ANCIENT_DEBRIS"
+        "value": "Blocks.CRYING_OBSIDIAN"
       },
       {
-        "value": "Blocks.ANCIENT_DEBRIS"
+        "value": "Blocks.CRYING_OBSIDIAN"
       },
       {
-        "value": "Blocks.ANCIENT_DEBRIS"
+        "value": "Blocks.CRYING_OBSIDIAN"
       },
       {
-        "value": "CUSTOM:OverworldExpansionTemplate"
+        "value": "CUSTOM:EmptyExpansionTemplate"
       },
       {
-        "value": "Blocks.ANCIENT_DEBRIS"
+        "value": "Blocks.CRYING_OBSIDIAN"
       },
       {
-        "value": "Blocks.ANCIENT_DEBRIS"
+        "value": "Blocks.CRYING_OBSIDIAN"
       },
       {
-        "value": "Blocks.ANCIENT_DEBRIS"
+        "value": "Blocks.CRYING_OBSIDIAN"
       },
       {
-        "value": "Blocks.ANCIENT_DEBRIS"
+        "value": "Blocks.CRYING_OBSIDIAN"
       }
     ],
     "recipeReturnStack": {

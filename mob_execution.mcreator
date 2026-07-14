@@ -257,7 +257,7 @@
           "src/main/java/com/myshuaibi/mobexecution/block/entity/AutoExecutionMachineBlockEntity.java"
         ]
       },
-      "path": "~/Machine/blocks/Auto Machine"
+      "path": "~/Machine/blocks"
     },
     {
       "name": "ExecutionMachineLight",
@@ -289,19 +289,6 @@
         "files": [
           "src/main/resources/data/mob_execution/advancement/recipes/execution_machine_craft.json",
           "src/main/resources/data/mob_execution/recipe/execution_machine_craft.json"
-        ]
-      },
-      "path": "~/Machine/recipe"
-    },
-    {
-      "name": "AutoExecutionMachineSmith",
-      "type": "anvilrecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "auto_execution_machine_smith",
-      "metadata": {
-        "files": [
-          "src/main/java/com/myshuaibi/mobexecution/anvilrecipes/AutoExecutionMachineSmithAnvilRecipe.java"
         ]
       },
       "path": "~/Machine/recipe"
@@ -448,18 +435,6 @@
         ]
       },
       "path": "~/Machine/gui/text"
-    },
-    {
-      "name": "MobExecutionCommomSet",
-      "type": "config",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mob_execution_commom_set",
-      "metadata": {
-        "files": [
-          "src/main/java/com/myshuaibi/mobexecution/configuration/MobExecutionCommomSetConfiguration.java"
-        ]
-      }
     },
     {
       "name": "MachineProtection",
@@ -914,6 +889,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -924,10 +903,6 @@
           {
             "name": "z",
             "type": "number"
-          },
-          {
-            "name": "tem",
-            "type": "string"
           },
           {
             "name": "world",
@@ -1235,19 +1210,6 @@
       "path": "~/Template/Upgrade Template/recipe"
     },
     {
-      "name": "RegenerationUpgradeSmith",
-      "type": "anvilrecipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "regeneration_upgrade_smith",
-      "metadata": {
-        "files": [
-          "src/main/java/com/myshuaibi/mobexecution/anvilrecipes/RegenerationUpgradeSmithAnvilRecipe.java"
-        ]
-      },
-      "path": "~/Template/Upgrade Template/recipe"
-    },
-    {
       "name": "RegenerationDo",
       "type": "procedure",
       "compiles": true,
@@ -1485,17 +1447,6 @@
       "path": "~/extra/recipe"
     },
     {
-      "name": "CoarseRubyInformation",
-      "type": "jeiinformation",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "coarse_ruby_information",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/extra/recipe"
-    },
-    {
       "name": "InfestationText",
       "type": "procedure",
       "compiles": true,
@@ -1503,6 +1454,10 @@
       "registry_name": "infestation_text",
       "metadata": {
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "itemstack",
             "type": "itemstack"
@@ -1607,10 +1562,442 @@
         ]
       },
       "path": "~/event/commom"
+    },
+    {
+      "name": "LootingUpgrade",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "looting_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/item/LootingUpgradeItem.java",
+          "src/main/resources/assets/mob_execution/models/item/looting_upgrade.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "LootingUpgradeHigh",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "looting_upgrade_high",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mob_execution/models/item/looting_upgrade_high.json",
+          "src/main/java/com/myshuaibi/mobexecution/item/LootingUpgradeHighItem.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "LootingUpgradeText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "looting_upgrade_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/LootingUpgradeTextProcedure.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/text"
+    },
+    {
+      "name": "ExecutionDrops",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "execution_drops",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/ExecutionDropsProcedure.java"
+        ]
+      },
+      "path": "~/event"
+    },
+    {
+      "name": "KillingIntent",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "killing_intent",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/potion/KillingIntentMobEffect.java"
+        ]
+      },
+      "path": "~/effort"
+    },
+    {
+      "name": "KillingIntentDo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "killing_intent_do",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/KillingIntentDoProcedure.java"
+        ]
+      },
+      "path": "~/effort"
+    },
+    {
+      "name": "KillingIntentUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "killing_intent_use",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "duration",
+            "type": "number"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/KillingIntentUseProcedure.java"
+        ]
+      },
+      "path": "~/effort"
+    },
+    {
+      "name": "DoubleTurnInt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_turn_int",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "num",
+            "type": "number"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/DoubleTurnIntProcedure.java"
+        ]
+      },
+      "path": "~/event/commom"
+    },
+    {
+      "name": "KillingIntentLimit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "killing_intent_limit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/KillingIntentLimitProcedure.java"
+        ]
+      },
+      "path": "~/effort"
+    },
+    {
+      "name": "KillingIntentStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "killing_intent_start",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/KillingIntentStartProcedure.java"
+        ]
+      },
+      "path": "~/effort"
+    },
+    {
+      "name": "LootingUpgradeCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "looting_upgrade_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/recipe/looting_upgrade_craft.json",
+          "src/main/resources/data/mob_execution/advancement/recipes/looting_upgrade_craft.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe"
+    },
+    {
+      "name": "LootingUpgradeSmith",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "looting_upgrade_smith",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/recipe/looting_upgrade_smith.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe"
+    },
+    {
+      "name": "LimitBreakUpgrade",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "limit_break_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/item/LimitBreakUpgradeItem.java",
+          "src/main/resources/assets/mob_execution/models/item/limit_break_upgrade.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "LimitBreakHighUpgrade",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "limit_break_high_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mob_execution/models/item/limit_break_high_upgrade.json",
+          "src/main/java/com/myshuaibi/mobexecution/item/LimitBreakHighUpgradeItem.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "LimitBreakText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "limit_break_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/LimitBreakTextProcedure.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/text"
+    },
+    {
+      "name": "LimitHealth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "limit_health",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "number",
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/LimitHealthProcedure.java"
+        ]
+      },
+      "path": "~/event/commom"
+    },
+    {
+      "name": "LimitBreakUpgradeCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "limit_break_upgrade_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/recipe/limit_break_upgrade_craft.json",
+          "src/main/resources/data/mob_execution/advancement/recipes/limit_break_upgrade_craft.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe"
+    },
+    {
+      "name": "LimitBreakHighUpgradeCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "limit_break_high_upgrade_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mob_execution/recipe/limit_break_high_upgrade_craft.json",
+          "src/main/resources/data/mob_execution/advancement/recipes/limit_break_high_upgrade_craft.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe"
+    },
+    {
+      "name": "InfiniteUpgrade",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/item/InfiniteUpgradeItem.java",
+          "src/main/resources/assets/mob_execution/models/item/infinite_upgrade.json"
+        ]
+      },
+      "path": "~/Template/Upgrade Template"
+    },
+    {
+      "name": "InfiniteText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ],
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/procedures/InfiniteTextProcedure.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/text"
+    },
+    {
+      "name": "MobExecutionCommomSet",
+      "type": "config",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mob_execution_commom_set",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/configuration/MobExecutionCommomSetConfiguration.java"
+        ]
+      }
+    },
+    {
+      "name": "RegenerationUpgradeSmith",
+      "type": "anvilrecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "regeneration_upgrade_smith",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/anvilrecipes/RegenerationUpgradeSmithAnvilRecipe.java"
+        ]
+      },
+      "path": "~/Template/Upgrade Template/recipe"
+    },
+    {
+      "name": "AutoExecutionMachineSmith",
+      "type": "anvilrecipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_execution_machine_smith",
+      "metadata": {
+        "files": [
+          "src/main/java/com/myshuaibi/mobexecution/anvilrecipes/AutoExecutionMachineSmithAnvilRecipe.java"
+        ]
+      },
+      "path": "~/Machine/recipe"
+    },
+    {
+      "name": "CoarseRubyInformation",
+      "type": "jeiinformation",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coarse_ruby_information",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/extra"
     }
   ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "block.execution_machine.use",
+      "files": [
+        "block.execution_machine.use"
+      ],
+      "category": "ui",
+      "subtitle": "Machine:Fusion"
+    }
+  ],
   "tag_elements": {
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:AutoExecutionMachine",
@@ -1649,7 +2036,12 @@
       "CUSTOM:RegenerationUpgrade",
       "CUSTOM:SimulateUpgrade",
       "CUSTOM:RealDamageUpgrade",
-      "CUSTOM:TransmissionUpgrade"
+      "CUSTOM:TransmissionUpgrade",
+      "CUSTOM:LootingUpgrade",
+      "CUSTOM:LootingUpgradeHigh",
+      "CUSTOM:LimitBreakUpgrade",
+      "CUSTOM:LimitBreakHighUpgrade",
+      "CUSTOM:InfiniteUpgrade"
     ],
     "DAMAGE_TYPES:minecraft:bypasses_armor": [
       "CUSTOM:ExecutionReal",
@@ -1668,6 +2060,15 @@
     ],
     "DAMAGE_TYPES:minecraft:bypasses_shield": [
       "CUSTOM:ExecutionRealAdvanced"
+    ],
+    "ITEMS:mod:has_level": [
+      "CUSTOM:EfficiencyUpgrade",
+      "CUSTOM:LootingUpgrade"
+    ],
+    "ITEMS:mod:bypasses_infinite": [
+      "CUSTOM:CreateUpgrade",
+      "CUSTOM:InfiniteUpgrade",
+      "CUSTOM:EasterEggUpgrade"
     ]
   },
   "tab_element_order": {
@@ -1678,8 +2079,13 @@
       "KillingGem",
       "EmptyUpgradeTemplate",
       "CreateUpgrade",
+      "InfiniteUpgrade",
+      "LimitBreakUpgrade",
+      "LimitBreakHighUpgrade",
       "EfficiencyUpgrade",
       "EfficiencyUpgradeHigh",
+      "LootingUpgrade",
+      "LootingUpgradeHigh",
       "RealDamageUpgrade",
       "RegenerationUpgrade",
       "SimulateUpgrade",
@@ -1692,21 +2098,36 @@
   },
   "language_map": {
     "en_us": {
-      "block.mob_execution.execution_machine": "Execution Machine",
-      "item_group.mob_execution.mob_execution": "Mob Execution",
-      "death.attack.execution_common.item": "%1$s was executed by %2$s using %3$s",
-      "death.attack.execution_common": "%1$s was executed",
-      "death.attack.execution_common.player": "%1$s executed whilst trying to escape %2$s",
       "block.mob_execution.auto_execution_machine": "Auto Execution Machine",
+      "block.mob_execution.execution_machine": "Execution Machine",
+      "item.mob_execution.coarse_ruby": "Coarse Ruby",
+      "item.mob_execution.create_upgrade": "Create Upgrade",
+      "item.mob_execution.create_upgrade.description_0": "§3--Remove all execution restrictions except for Article 6",
+      "item.mob_execution.create_upgrade.description_1": "§3--Single hit damage increased to infinity",
+      "item.mob_execution.create_upgrade.description_2": "§3--Use advanced true damage type",
+      "item.mob_execution.easter_egg_upgrade": "Easter Egg Upgrade",
+      "item.mob_execution.easter_egg_upgrade.description_0": "§3Play ear-piercing sound effects and dazzling visual effects when executing entities",
+      "item.mob_execution.efficiency_upgrade": "Efficiency Upgrade",
+      "item.mob_execution.efficiency_upgrade.description_0": "§3Single hit damage * ",
+      "item.mob_execution.efficiency_upgrade_high": "Efficiency Upgrade High",
+      "item.mob_execution.empty_expansion_template": "Empty Expansion Template",
       "item.mob_execution.empty_upgrade_template": "Empty Upgrade Template",
-      "gui.mob_execution.machine.title": "Execution Machine",
-      "gui.mob_execution.expansion.title": "Expansion slot",
-      "gui.mob_execution.upgrade.title": "Upgrade slot",
-      "mob_execution.configuration.limit_max_health": "limit_max_health",
-      "mob_execution.configuration.machine_protection": "machine_protection",
-      "item.mob_execution.overworld_expansion_template": "Overworld Expansion Template",
-      "item.mob_execution.nether_expansion_template": "Nether Expansion Template",
       "item.mob_execution.end_expansion_template": "End Expansion Template",
+      "item.mob_execution.infestation.description_0": "Attack Damage",
+      "item.mob_execution.infestation.description_1": "§3Remaining ",
+      "item.mob_execution.infestation.description_2": " inlay attempts",
+      "item.mob_execution.infinite_upgrade": "Infinite Upgrade",
+      "item.mob_execution.infinite_upgrade.description_0": "§3-Considered as the sum of all templates",
+      "item.mob_execution.infinite_upgrade.description_1": "§3-Except for create upgrades and Easter egg upgrades",
+      "item.mob_execution.killing_gem": "Killing Gem",
+      "item.mob_execution.limit_break_high_upgrade": "Limit Break High Upgrade",
+      "item.mob_execution.limit_break_high_upgrade.description_0": "§3--Remove the execution restrictions in Article 1",
+      "item.mob_execution.limit_break_high_upgrade.description_1": "§3--Second Restriction Amendment: Non-Player",
+      "item.mob_execution.limit_break_upgrade": "Limit Break Upgrade",
+      "item.mob_execution.limit_break_upgrade.description_0": "§3--Remove the execution restriction in Article 5",
+      "item.mob_execution.looting_upgrade": "Looting Upgrade",
+      "item.mob_execution.looting_upgrade.description_0": "§3All item +",
+      "item.mob_execution.looting_upgrade_high": "Looting Upgrade High",
       "item.mob_execution.machine.description_0": "§7Can carry out rapid execution on eligible entities",
       "item.mob_execution.machine.description_1": "View entities that meet the criteria by [SHIRT]",
       "item.mob_execution.machine.description_2": "§7--Maximum HP ≤ ",
@@ -1715,61 +2136,76 @@
       "item.mob_execution.machine.description_5": "§7--No target of hatred",
       "item.mob_execution.machine.description_6": "§7--From Minecraft",
       "item.mob_execution.machine.description_7": "§7--Not Lord",
-      "mob_execution.configuration.basic_execution": "basic_execution",
-      "item.mob_execution.empty_expansion_template": "Empty Expansion Template",
-      "item.mob_execution.easter_egg_upgrade": "Easter Egg Upgrade",
-      "item.mob_execution.easter_egg_upgrade.description_0": "§3Play ear-piercing sound effects and dazzling visual effects when executing entities",
-      "mob_execution.configuration.precision_mode": "precision_mode",
-      "advancements.make_easter_egg_upgrade.descr": "§9Forge the most §r§museless§r§9 great upgrade template using divinely-infused lightning",
-      "advancements.make_easter_egg_upgrade.title": "Heavenly Thunder Forging Soldiers",
-      "advancements.root_mob_execution.title": "Mob Execution",
-      "advancements.root_mob_execution.descr": "Create an execution machine that belongs solely to you",
-      "item.mob_execution.create_upgrade": "Create Upgrade",
-      "item.mob_execution.create_upgrade.description_0": "§3--Remove all execution restrictions except for Article 6",
-      "item.mob_execution.create_upgrade.description_1": "§3--Single hit damage increased to infinity",
-      "item.mob_execution.create_upgrade.description_2": "§3--Use advanced true damage type",
-      "death.attack.execution_real_advanced": "%1$s was executed",
-      "death.attack.execution_real_advanced.item": "%1$s was executed by %2$s using %3$s",
-      "death.attack.execution_real_advanced.player": "%1$s executed whilst trying to escape %2$s",
-      "death.attack.execution_real.player": "%1$s executed whilst trying to escape %2$s",
-      "death.attack.execution_real": "%1$s was executed",
-      "death.attack.execution_real.item": "%1$s was executed by %2$s using %3$s",
-      "item.mob_execution.efficiency_upgrade": "Efficiency Upgrade",
-      "item.mob_execution.efficiency_upgrade_high": "Efficiency Upgrade High",
-      "item.mob_execution.efficiency_upgrade.description_0": "§3Single hit damage * ",
+      "item.mob_execution.nether_expansion_template": "Nether Expansion Template",
+      "item.mob_execution.overworld_expansion_template": "Overworld Expansion Template",
+      "item.mob_execution.real_damage_upgrade": "Real Damage Upgrade",
+      "item.mob_execution.real_damage_upgrade.description_0": "§3Execute entities with real damage",
       "item.mob_execution.regeneration_upgrade": "Regeneration Upgrade",
       "item.mob_execution.regeneration_upgrade.description_0": "§3Spawn the same type of entity in place when an entity is killed",
       "item.mob_execution.regeneration_upgrade.description_1": "§3-The generated item has a 1.5s resistance V",
       "item.mob_execution.regeneration_upgrade.description_2": "§3-Each template provides a 20% probability",
       "item.mob_execution.simulate_upgrade": "Simulate Upgrade",
       "item.mob_execution.simulate_upgrade.description_0": "§3Attack the entity in the name of the master",
-      "item.mob_execution.real_damage_upgrade": "Real Damage Upgrade",
-      "item.mob_execution.real_damage_upgrade.description_0": "§3Execute entities with real damage",
-      "item.mob_execution.coarse_ruby": "Coarse Ruby",
-      "item.mob_execution.killing_gem": "Killing Gem",
-      "jei.mob_execution.coarse_ruby_information": "Give with the magic of emerald mixed with lapis lazuli on the execution machine",
-      "item.mob_execution.infestation.description_0": "Attack Damage",
       "item.mob_execution.transmission_upgrade": "Transmission Upgrade",
-      "mob_execution.configuration.infestation_amount": "infestation_amount",
       "item.mob_execution.transmission_upgrade.description_0": "§3Can transfer the experience and items from the execution machine to the master.",
-      "item.mob_execution.transmission_upgrade.description_1": "§3--Warning: The master is in a dangerous area (e.g., lava), which may cause item loss"
+      "item.mob_execution.transmission_upgrade.description_1": "§3--Warning: The master is in a dangerous area (e.g., lava), which may cause item loss",
+      "item_group.mob_execution.mob_execution": "Mob Execution",
+      "gui.mob_execution.expansion.title": "Expansion slot",
+      "gui.mob_execution.machine.title": "Execution Machine",
+      "gui.mob_execution.upgrade.title": "Upgrade slot",
+      "death.attack.execution_common": "%1$s was executed",
+      "death.attack.execution_common.item": "%1$s was executed by %2$s using %3$s",
+      "death.attack.execution_common.player": "%1$s executed whilst trying to escape %2$s",
+      "death.attack.execution_real": "%1$s was executed",
+      "death.attack.execution_real.item": "%1$s was executed by %2$s using %3$s",
+      "death.attack.execution_real.player": "%1$s executed whilst trying to escape %2$s",
+      "death.attack.execution_real_advanced": "%1$s was executed",
+      "death.attack.execution_real_advanced.item": "%1$s was executed by %2$s using %3$s",
+      "death.attack.execution_real_advanced.player": "%1$s executed whilst trying to escape %2$s",
+      "advancements.make_easter_egg_upgrade.descr": "§9Forge the most §r§museless§r§9 great upgrade template using divinely-infused lightning",
+      "advancements.make_easter_egg_upgrade.title": "Heavenly Thunder Forging Soldiers",
+      "advancements.root_mob_execution.descr": "Create an execution machine that belongs solely to you",
+      "advancements.root_mob_execution.title": "Mob Execution",
+      "effect.mob_execution.killing_intent": "Killing Intent",
+      "subtitles.block.execution_machine.use": "Machine:Fusion",
+      "mob_execution.configuration.basic_execution": "basic_execution",
+      "mob_execution.configuration.infestation_amount": "infestation_amount",
+      "mob_execution.configuration.limit_max_health": "limit_max_health",
+      "mob_execution.configuration.machine_protection": "machine_protection",
+      "mob_execution.configuration.precision_mode": "precision_mode",
+      "jei.mob_execution.coarse_ruby_information": "The magical power obtained by mixing emerald and lapis lazuli on the execution machine"
     },
     "zh_cn": {
-      "block.mob_execution.execution_machine": "处决机",
-      "item_group.mob_execution.mob_execution": "生物处决",
-      "death.attack.execution_common.item": "%1$s被%2$s使用%3$s处决了",
-      "death.attack.execution_common": "%1$s被处决了",
-      "death.attack.execution_common.player": "%1$s在试图逃离%2$s时被处决了",
       "block.mob_execution.auto_execution_machine": "自动处决机",
+      "block.mob_execution.execution_machine": "处决机",
+      "item.mob_execution.coarse_ruby": "粗制红宝石",
+      "item.mob_execution.create_upgrade": "创造升级",
+      "item.mob_execution.create_upgrade.description_0": "§3--移除非第6条的所有处决限制",
+      "item.mob_execution.create_upgrade.description_1": "§3--单次伤害量提升至无穷",
+      "item.mob_execution.create_upgrade.description_2": "§3--使用高级真伤伤害类型",
+      "item.mob_execution.easter_egg_upgrade": "彩蛋升级",
+      "item.mob_execution.easter_egg_upgrade.description_0": "§3处决实体时播放炸耳音效和炫目特效",
+      "item.mob_execution.efficiency_upgrade": "效率升级",
+      "item.mob_execution.efficiency_upgrade.description_0": "§3单次伤害量 + ",
+      "item.mob_execution.efficiency_upgrade_high": "高级效率升级",
+      "item.mob_execution.empty_expansion_template": "空白扩容模板",
       "item.mob_execution.empty_upgrade_template": "空白升级模板",
-      "gui.mob_execution.machine.title": "处决机",
-      "gui.mob_execution.expansion.title": "扩容槽",
-      "gui.mob_execution.upgrade.title": "升级槽",
-      "mob_execution.configuration.limit_max_health": "限制最大生命值",
-      "mob_execution.configuration.machine_protection": "机器保护",
-      "item.mob_execution.overworld_expansion_template": "主世界扩容模板",
-      "item.mob_execution.nether_expansion_template": "下界扩容模板",
       "item.mob_execution.end_expansion_template": "末地扩容模板",
+      "item.mob_execution.infestation.description_0": "攻击伤害",
+      "item.mob_execution.infestation.description_1": "§3剩余 ",
+      "item.mob_execution.infestation.description_2": " 次镶嵌次数",
+      "item.mob_execution.infinite_upgrade": "无穷升级",
+      "item.mob_execution.infinite_upgrade.description_0": "§3-被视为所有模板的总和",
+      "item.mob_execution.infinite_upgrade.description_1": "§3-除创造升级、彩蛋升级",
+      "item.mob_execution.killing_gem": "杀戮宝石",
+      "item.mob_execution.limit_break_high_upgrade": "高级破限升级",
+      "item.mob_execution.limit_break_high_upgrade.description_0": "§3--移除第1条处决限制",
+      "item.mob_execution.limit_break_high_upgrade.description_1": "§3--第2限制修正:非玩家",
+      "item.mob_execution.limit_break_upgrade": "破限升级",
+      "item.mob_execution.limit_break_upgrade.description_0": "§3--移除第5条处决限制",
+      "item.mob_execution.looting_upgrade": "抢夺升级",
+      "item.mob_execution.looting_upgrade.description_0": "§3所有掉落物 + ",
+      "item.mob_execution.looting_upgrade_high": "高级抢夺升级",
       "item.mob_execution.machine.description_0": "§7可以对符合条件的实体进行快速处决",
       "item.mob_execution.machine.description_1": "按[SHIRT]查看符合条件的实体",
       "item.mob_execution.machine.description_2": "§7--最大生命值 ≤ ",
@@ -1778,44 +2214,44 @@
       "item.mob_execution.machine.description_5": "§7--无仇恨目标",
       "item.mob_execution.machine.description_6": "§7--来自原版",
       "item.mob_execution.machine.description_7": "§7--非主人",
-      "mob_execution.configuration.basic_execution": "基础处决",
-      "item.mob_execution.empty_expansion_template": "空白扩容模板",
-      "item.mob_execution.easter_egg_upgrade": "彩蛋升级",
-      "item.mob_execution.easter_egg_upgrade.description_0": "§3处决实体时播放炸耳音效和炫目特效",
-      "mob_execution.configuration.precision_mode": "精准模式",
-      "advancements.make_easter_egg_upgrade.descr": "§9使用富含神性的雷电锻造出最§r§m没用§r§9伟大的升级模板",
-      "advancements.make_easter_egg_upgrade.title": "天雷锻兵",
-      "advancements.root_mob_execution.title": "生物处决",
-      "advancements.root_mob_execution.descr": "制造出独属于你的处决机器吧",
-      "item.mob_execution.create_upgrade": "创造升级",
-      "item.mob_execution.create_upgrade.description_0": "§3--移除非第6条的所有处决限制",
-      "item.mob_execution.create_upgrade.description_1": "§3--单次伤害量提升至无穷",
-      "item.mob_execution.create_upgrade.description_2": "§3--使用高级真伤伤害类型",
-      "death.attack.execution_real_advanced": "%1$s被处决了",
-      "death.attack.execution_real_advanced.item": "%1$s被%2$s使用%3$s处决了",
-      "death.attack.execution_real_advanced.player": "%1$s在试图逃离%2$s时被处决了",
-      "death.attack.execution_real.player": "%1$s在试图逃离%2$s时被处决了",
-      "death.attack.execution_real": "%1$s被处决了",
-      "death.attack.execution_real.item": "%1$s被%2$s使用%3$s处决了",
-      "item.mob_execution.efficiency_upgrade": "效率升级",
-      "item.mob_execution.efficiency_upgrade_high": "高级效率升级",
-      "item.mob_execution.efficiency_upgrade.description_0": "§3单次伤害量 + ",
+      "item.mob_execution.nether_expansion_template": "下界扩容模板",
+      "item.mob_execution.overworld_expansion_template": "主世界扩容模板",
+      "item.mob_execution.real_damage_upgrade": "真伤升级",
+      "item.mob_execution.real_damage_upgrade.description_0": "§3使用真实伤害处决实体",
       "item.mob_execution.regeneration_upgrade": "再生升级",
       "item.mob_execution.regeneration_upgrade.description_0": "§3杀死实体时在原地生成同类型实体",
       "item.mob_execution.regeneration_upgrade.description_1": "§3-生成物拥有1.5s的抗性提升V",
       "item.mob_execution.regeneration_upgrade.description_2": "§3-每个模板提供20%概率",
       "item.mob_execution.simulate_upgrade": "模拟升级",
       "item.mob_execution.simulate_upgrade.description_0": "§3以主人的名义攻击实体",
-      "item.mob_execution.real_damage_upgrade": "真伤升级",
-      "item.mob_execution.real_damage_upgrade.description_0": "§3使用真实伤害处决实体",
-      "item.mob_execution.coarse_ruby": "粗制红宝石",
-      "item.mob_execution.killing_gem": "杀戮宝石",
-      "jei.mob_execution.coarse_ruby_information": "用绿宝石混合青金石的魔力在处决机上得到",
-      "item.mob_execution.infestation.description_0": "攻击伤害",
       "item.mob_execution.transmission_upgrade": "传输升级",
-      "mob_execution.configuration.infestation_amount": "染咒数值",
       "item.mob_execution.transmission_upgrade.description_0": "§3可将处决机上的经验和物品传输到主人身上",
-      "item.mob_execution.transmission_upgrade.description_1": "§3--警告:主人处在危险地带(e.g.岩浆)可能导致物品丢失"
+      "item.mob_execution.transmission_upgrade.description_1": "§3--警告:主人处在危险地带(e.g.岩浆)可能导致物品丢失",
+      "item_group.mob_execution.mob_execution": "生物处决",
+      "gui.mob_execution.expansion.title": "扩容槽",
+      "gui.mob_execution.machine.title": "处决机",
+      "gui.mob_execution.upgrade.title": "升级槽",
+      "death.attack.execution_common": "%1$s被处决了",
+      "death.attack.execution_common.item": "%1$s被%2$s使用%3$s处决了",
+      "death.attack.execution_common.player": "%1$s在试图逃离%2$s时被处决了",
+      "death.attack.execution_real": "%1$s被处决了",
+      "death.attack.execution_real.item": "%1$s被%2$s使用%3$s处决了",
+      "death.attack.execution_real.player": "%1$s在试图逃离%2$s时被处决了",
+      "death.attack.execution_real_advanced": "%1$s被处决了",
+      "death.attack.execution_real_advanced.item": "%1$s被%2$s使用%3$s处决了",
+      "death.attack.execution_real_advanced.player": "%1$s在试图逃离%2$s时被处决了",
+      "advancements.make_easter_egg_upgrade.descr": "§9使用富含神性的雷电锻造出最§r§m没用§r§9伟大的升级模板",
+      "advancements.make_easter_egg_upgrade.title": "天雷锻兵",
+      "advancements.root_mob_execution.descr": "制造出独属于你的处决机器吧",
+      "advancements.root_mob_execution.title": "生物处决",
+      "effect.mob_execution.killing_intent": "杀气",
+      "subtitles.block.execution_machine.use": "处决机:融合",
+      "mob_execution.configuration.basic_execution": "基础处决伤害",
+      "mob_execution.configuration.infestation_amount": "染咒加成",
+      "mob_execution.configuration.limit_max_health": "最大限制生命",
+      "mob_execution.configuration.machine_protection": "机器保护",
+      "mob_execution.configuration.precision_mode": "精准模式",
+      "jei.mob_execution.coarse_ruby_information": "在处决机上混合绿宝石与青金石的魔力获得"
     }
   },
   "metadata": {
@@ -1824,13 +2260,16 @@
       "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModMenus.java",
       "src/main/java/com/myshuaibi/mobexecution/network/MenuStateUpdateMessage.java",
       "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModJeiInformation.java",
+      "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModMobEffects.java",
       "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModBrewingRecipes.java",
       "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModConfigs.java",
       "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModAnvilRecipes.java",
       "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModBlocks.java",
       "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModBlockEntities.java",
       "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModItems.java",
+      "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModSounds.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/assets/mob_execution/sounds.json",
       "src/main/resources/pack.mcmeta",
       "src/main/java/com/myshuaibi/mobexecution/MobExecutionMod.java",
       "src/main/java/com/myshuaibi/mobexecution/init/MobExecutionModTabs.java"
@@ -1847,10 +2286,6 @@
             "children": [
               {
                 "name": "Common Machine",
-                "children": []
-              },
-              {
-                "name": "Auto Machine",
                 "children": []
               },
               {
@@ -1943,6 +2378,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "effort",
+        "children": []
       }
     ]
   },
@@ -1953,8 +2392,9 @@
     "description": "None",
     "author": "myshuaibi",
     "websiteURL": "https://myshuaibi.dpdns.org/",
-    "license": "GNU Lesser General Public License version 2.1 (LGPLv2.1)",
+    "license": "CC BY-NC",
     "serverSideOnly": false,
+    "modPicture": "icon",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],

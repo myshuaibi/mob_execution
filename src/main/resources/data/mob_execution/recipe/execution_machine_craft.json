@@ -11,7 +11,7 @@
       "tag": "minecraft:swords"
     },
     "b": {
-      "item": "minecraft:smooth_stone"
+      "tag": "c:obsidians"
     },
     "c": {
       "item": "minecraft:redstone"

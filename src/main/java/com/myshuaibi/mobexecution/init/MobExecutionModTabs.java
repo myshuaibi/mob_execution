@@ -28,8 +28,13 @@ public class MobExecutionModTabs {
 				tabData.accept(MobExecutionModItems.KILLING_GEM.get());
 				tabData.accept(MobExecutionModItems.EMPTY_UPGRADE_TEMPLATE.get());
 				tabData.accept(MobExecutionModItems.CREATE_UPGRADE.get());
+				tabData.accept(MobExecutionModItems.INFINITE_UPGRADE.get());
+				tabData.accept(MobExecutionModItems.LIMIT_BREAK_UPGRADE.get());
+				tabData.accept(MobExecutionModItems.LIMIT_BREAK_HIGH_UPGRADE.get());
 				tabData.accept(MobExecutionModItems.EFFICIENCY_UPGRADE.get());
 				tabData.accept(MobExecutionModItems.EFFICIENCY_UPGRADE_HIGH.get());
+				tabData.accept(MobExecutionModItems.LOOTING_UPGRADE.get());
+				tabData.accept(MobExecutionModItems.LOOTING_UPGRADE_HIGH.get());
 				tabData.accept(MobExecutionModItems.REAL_DAMAGE_UPGRADE.get());
 				tabData.accept(MobExecutionModItems.REGENERATION_UPGRADE.get());
 				tabData.accept(MobExecutionModItems.SIMULATE_UPGRADE.get());

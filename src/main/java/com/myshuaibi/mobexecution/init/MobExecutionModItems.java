@@ -33,6 +33,11 @@ public class MobExecutionModItems {
 	public static final DeferredItem<Item> COARSE_RUBY;
 	public static final DeferredItem<Item> KILLING_GEM;
 	public static final DeferredItem<Item> TRANSMISSION_UPGRADE;
+	public static final DeferredItem<Item> LOOTING_UPGRADE;
+	public static final DeferredItem<Item> LOOTING_UPGRADE_HIGH;
+	public static final DeferredItem<Item> LIMIT_BREAK_UPGRADE;
+	public static final DeferredItem<Item> LIMIT_BREAK_HIGH_UPGRADE;
+	public static final DeferredItem<Item> INFINITE_UPGRADE;
 	static {
 		EXECUTION_MACHINE = block(MobExecutionModBlocks.EXECUTION_MACHINE);
 		AUTO_EXECUTION_MACHINE = block(MobExecutionModBlocks.AUTO_EXECUTION_MACHINE);
@@ -51,6 +56,11 @@ public class MobExecutionModItems {
 		COARSE_RUBY = REGISTRY.register("coarse_ruby", CoarseRubyItem::new);
 		KILLING_GEM = REGISTRY.register("killing_gem", KillingGemItem::new);
 		TRANSMISSION_UPGRADE = REGISTRY.register("transmission_upgrade", TransmissionUpgradeItem::new);
+		LOOTING_UPGRADE = REGISTRY.register("looting_upgrade", LootingUpgradeItem::new);
+		LOOTING_UPGRADE_HIGH = REGISTRY.register("looting_upgrade_high", LootingUpgradeHighItem::new);
+		LIMIT_BREAK_UPGRADE = REGISTRY.register("limit_break_upgrade", LimitBreakUpgradeItem::new);
+		LIMIT_BREAK_HIGH_UPGRADE = REGISTRY.register("limit_break_high_upgrade", LimitBreakHighUpgradeItem::new);
+		INFINITE_UPGRADE = REGISTRY.register("infinite_upgrade", InfiniteUpgradeItem::new);
 	}
 
 	// Start of user code block custom items

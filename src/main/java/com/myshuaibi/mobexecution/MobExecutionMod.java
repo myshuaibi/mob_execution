@@ -28,11 +28,7 @@ import java.util.Comparator;
 import it.unimi.dsi.fastutil.ints.IntObjectPair;
 import it.unimi.dsi.fastutil.ints.IntObjectImmutablePair;
 
-import com.myshuaibi.mobexecution.init.MobExecutionModTabs;
-import com.myshuaibi.mobexecution.init.MobExecutionModMenus;
-import com.myshuaibi.mobexecution.init.MobExecutionModItems;
-import com.myshuaibi.mobexecution.init.MobExecutionModBlocks;
-import com.myshuaibi.mobexecution.init.MobExecutionModBlockEntities;
+import com.myshuaibi.mobexecution.init.*;
 
 @Mod("mob_execution")
 public class MobExecutionMod {
@@ -44,10 +40,12 @@ public class MobExecutionMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+		MobExecutionModSounds.REGISTRY.register(modEventBus);
 		MobExecutionModBlocks.REGISTRY.register(modEventBus);
 		MobExecutionModBlockEntities.REGISTRY.register(modEventBus);
 		MobExecutionModItems.REGISTRY.register(modEventBus);
 		MobExecutionModTabs.REGISTRY.register(modEventBus);
+		MobExecutionModMobEffects.REGISTRY.register(modEventBus);
 		MobExecutionModMenus.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init

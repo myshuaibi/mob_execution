@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "def",
+    "ghi"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "b": {
+      "item": "minecraft:nether_star"
+    },
+    "c": {
+      "item": "minecraft:ghast_tear"
+    },
+    "d": {
+      "item": "minecraft:blaze_rod"
+    },
+    "e": {
+      "item": "mob_execution:limit_break_upgrade"
+    },
+    "f": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "g": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "h": {
+      "item": "minecraft:magma_cream"
+    },
+    "i": {
+      "item": "minecraft:shulker_shell"
+    }
+  },
+  "result": {
+    "id": "mob_execution:limit_break_high_upgrade",
+    "count": 1
+  }
+}

@@ -22,7 +22,7 @@
       "value": "CUSTOM:KillingGem"
     },
     "smithingInputTemplateStack": {
-      "value": "Items.NETHERITE_UPGRADE"
+      "value": "CUSTOM:NetherExpansionTemplate"
     },
     "smithingReturnStack": {
       "value": "CUSTOM:RealDamageUpgrade"

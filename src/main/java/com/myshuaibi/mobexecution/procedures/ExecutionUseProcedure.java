@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ExperienceOrb;
@@ -17,6 +18,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
+
+import com.myshuaibi.mobexecution.init.MobExecutionModItems;
 
 @EventBusSubscriber
 public class ExecutionUseProcedure {
@@ -41,7 +44,7 @@ public class ExecutionUseProcedure {
 				if (EntityConditionCheckProcedure.execute(world, x, y, z, entity)) {
 					ExecutionDamageProcedure.execute(world, x, y, z, entity);
 				}
-			} else if (UpgradeGetProcedure.execute(world, x, y, z, "transmission") > 0 && (entity instanceof ItemEntity || entity instanceof ExperienceOrb)) {
+			} else if (UpgradeGetProcedure.execute(world, x, y, z, new ItemStack(MobExecutionModItems.TRANSMISSION_UPGRADE.get())) > 0 && (entity instanceof ItemEntity || entity instanceof ExperienceOrb)) {
 				if (!world.isClientSide()) {
 					lord = GetLordFromUuidProcedure.execute(getBlockNBTString(world, BlockPos.containing(x, y - 1, z), "lord"));
 					if (lord != null) {

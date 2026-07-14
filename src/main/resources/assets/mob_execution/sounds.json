@@ -1,0 +1,11 @@
+{
+  "block.execution_machine.use": {
+    "subtitle": "subtitles.block.execution_machine.use",
+    "sounds": [
+      {
+        "name": "mob_execution:block.execution_machine.use",
+        "stream": false
+      }
+    ]
+  }
+}

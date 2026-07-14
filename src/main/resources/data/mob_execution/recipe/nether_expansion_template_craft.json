@@ -8,10 +8,10 @@
   ],
   "key": {
     "a": {
-      "item": "minecraft:ancient_debris"
+      "item": "minecraft:crying_obsidian"
     },
     "b": {
-      "item": "mob_execution:overworld_expansion_template"
+      "item": "mob_execution:empty_expansion_template"
     }
   },
   "result": {

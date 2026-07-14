@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:LootingUpgrade"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.DRAGON_BREATH"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:EndExpansionTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:LootingUpgradeHigh"
+    },
+    "name": "looting_upgrade_smith",
+    "namespace": "mod"
+  }
+}
